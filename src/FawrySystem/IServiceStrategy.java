@@ -4,3 +4,4 @@ public interface IServiceStrategy {
      void ExecuteService();
      double getPrice();
 }
+//sssss
