@@ -18,7 +18,9 @@ public class Admin {
         Search search=Search.getInstance();
         search.setDiscountOverAllServices(discount);
     }
-
+    public void setDiscountForOneUser(double discount,User user){
+user.setOverAllDicount(discount);
+    }
 
 
 }

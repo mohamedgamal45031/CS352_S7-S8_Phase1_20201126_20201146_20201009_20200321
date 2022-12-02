@@ -14,12 +14,29 @@ public class User {
     private String password;
     private String creditCardNumber;
     private double walletBalance;
+    private double overAllDicount;
 
-public void PayForService(){}
+
+    public User() {
+        overAllDicount=0;
+    }
+
+    public void PayForService(){
+
+    s=new Discount(overAllDicount,s);
+s.ExecuteService();
+
+}
     public void setService(String s){
     Search search = Search.getInstance();
     this.s=search.getService(s);
 
     }
+    public void setOverAllDicount(double overAllDicount){
+    this.overAllDicount=overAllDicount;
+
+    }
+
+
 
 }
