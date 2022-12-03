@@ -28,13 +28,14 @@ public class Search {
         serviceHashMap.put("VodafoneRechrage", new VodafoneRechrage());
 
     }
-    public Map<Integer,IServiceStrategy> getService(String s){
+    //recharge
+    public Map<Integer,IServiceStrategy> getService(String s){//oragne
         Map<Integer, IServiceStrategy> ans = new HashMap<>();
-        int i = 0;
-        for (Map.Entry<String, IServiceStrategy> map :
+        int i = 1;
+        for (Map.Entry<String, IServiceStrategy> pair :
                 serviceHashMap.entrySet()) {
-                if(map.getKey().contains(s)) {
-                    ans.put(i,map.getValue());
+                if(pair.getKey().contains(s)) {
+                    ans.put(i,pair.getValue());
                     i++;
                 }
         }

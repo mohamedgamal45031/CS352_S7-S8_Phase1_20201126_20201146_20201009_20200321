@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class User {
 
-    private IServiceStrategy s;
+    private IServiceStrategy service;
+    private String userName;
     private String email;
     private String password;
     private String creditCardNumber;
@@ -17,9 +18,20 @@ public class User {
         overAllDicount = 0;
     }
 
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public User(String userName, String email, String password) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
+
     public void PayForService() {
 
-        s.ExecuteService();
+        service.ExecuteService();
 
     }
 
@@ -34,12 +46,15 @@ public class User {
         }
         Scanner myObj = new Scanner(System.in);
         System.out.println("Enter Num of Service to Select");
-        int service = myObj.nextInt();
-        s = map.get(service);
-        System.out.println(s.getName()+" Selected ");
-        s.ExecuteService();
-    }
+        int serviceNum = myObj.nextInt();
+        service = map.get(serviceNum);
+        ///////////////////////////
 
+
+    }
+    public IServiceStrategy getService(){
+        return service;
+    }
     public void setOverAllDicount(double overAllDicount) {
         this.overAllDicount = overAllDicount;
 
