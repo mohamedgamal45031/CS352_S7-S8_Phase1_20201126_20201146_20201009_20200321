@@ -1,14 +1,10 @@
 package FawrySystem;
 
+import java.util.Map;
+import java.util.Scanner;
+
 public class User {
-    /*
-    * - s: IServiceStrategy
-- userName: string
-- email: string
-- password: string
-- creditCardNumber:string
-- walletBalance:double
-* */
+
     private IServiceStrategy s;
     private String email;
     private String password;
@@ -18,25 +14,36 @@ public class User {
 
 
     public User() {
-        overAllDicount=0;
+        overAllDicount = 0;
     }
 
-    public void PayForService(){
+    public void PayForService() {
 
-    s=new Discount(overAllDicount,s);
-s.ExecuteService();
-
-}
-    public void setService(String s){
-    Search search = Search.getInstance();
-    this.s=search.getService(s);
-
-    }
-    public void setOverAllDicount(double overAllDicount){
-    this.overAllDicount=overAllDicount;
+        s.ExecuteService();
 
     }
 
+    public void setService(String ss) {
+        Search search = Search.getInstance();
+        Map<Integer,IServiceStrategy> map = search.getService(ss);
+
+        for (Map.Entry<Integer, IServiceStrategy> set :
+                map.entrySet()) {
+            System.out.print(set.getKey()+" - ");
+            System.out.println(set.getValue().getName());
+        }
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Enter Num of Service to Select");
+        int service = myObj.nextInt();
+        s = map.get(service);
+        System.out.println(s.getName()+" Selected ");
+        s.ExecuteService();
+    }
+
+    public void setOverAllDicount(double overAllDicount) {
+        this.overAllDicount = overAllDicount;
+
+    }
 
 
 }

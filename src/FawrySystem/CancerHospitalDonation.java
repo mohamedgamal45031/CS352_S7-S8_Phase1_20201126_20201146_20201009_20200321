@@ -2,7 +2,10 @@ package FawrySystem;
 
 public class CancerHospitalDonation implements IServiceStrategy{
     private double price;
-
+    private String name = "CancerHospitalDonation";
+    public String getName() {
+        return name;
+    }
     public CancerHospitalDonation() {
         this.price = 100.0;
     }

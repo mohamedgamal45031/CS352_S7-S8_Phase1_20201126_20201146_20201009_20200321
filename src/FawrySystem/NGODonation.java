@@ -1,12 +1,16 @@
 package FawrySystem;
 
 public class NGODonation implements IServiceStrategy{
+    private String name = "NGODonation";
+
     private double price;
 
     public NGODonation() {
         this.price = 100.0;
     }
-
+    public String getName() {
+        return name;
+    }
     @Override
     public void ExecuteService() {
         System.out.println("NGODonation cost is "+getPrice());

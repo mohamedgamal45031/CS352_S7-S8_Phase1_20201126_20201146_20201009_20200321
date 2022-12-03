@@ -8,9 +8,9 @@ public class Main {
 
         Admin gemy=new Admin();
         User zoza = new User();
-        zoza.setService("WERechrage");
-        gemy.setDiscountForOneUser(.05,zoza);
-        zoza.PayForService();
+        zoza.setService("Rechrage");
+//        gemy.setDiscountForOneUser(.05,zoza);
+//        zoza.PayForService();
 
 
 

@@ -21,4 +21,9 @@ public class Discount implements IServiceStrategy{
 
         return this.discountedservice.getPrice()-(this.discountedservice.getPrice()*this.discount);
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
 }
