@@ -7,12 +7,9 @@ public class VodafoneInternet implements IServiceStrategy{
     public VodafoneInternet() {
         this.price = 100.0;
     }
-
-
-
     @Override
     public void ExecuteService() {
-        System.out.println("Vodafone Rechrage cost is "+getPrice());
+        System.out.println("Vodafone Internet cost is "+getPrice());
     }
 
     @Override

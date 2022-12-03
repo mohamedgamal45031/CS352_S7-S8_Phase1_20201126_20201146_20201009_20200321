@@ -12,7 +12,7 @@ public class Discount implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-        System.out.println(getPrice());
+        System.out.println("the cost of the service after discount is : "+getPrice());
     }
 
     @Override

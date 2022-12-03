@@ -11,7 +11,7 @@ public class SchoolDonation implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("SchoolDonation cost is "+getPrice());
     }
 
     @Override

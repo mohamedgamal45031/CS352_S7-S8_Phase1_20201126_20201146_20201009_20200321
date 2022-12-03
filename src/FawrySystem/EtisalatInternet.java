@@ -9,7 +9,7 @@ public class EtisalatInternet implements IServiceStrategy{
     }
     @Override
     public void ExecuteService() {
-
+        System.out.println("EtisalatInternet cost is "+getPrice());
     }
 
     @Override

@@ -11,7 +11,7 @@ public class QuarterReceiptLandline implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("QuarterReceiptLandline cost is "+getPrice());
     }
 
     @Override

@@ -10,7 +10,7 @@ public class EtisalatRechrage implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("EtisalatRechrage cost is "+getPrice());
     }
 
     @Override

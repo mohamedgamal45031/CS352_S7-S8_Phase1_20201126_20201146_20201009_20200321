@@ -9,7 +9,7 @@ public class OrangeInternet implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("OrangeInternet cost is "+getPrice());
     }
 
     @Override

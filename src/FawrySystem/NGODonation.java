@@ -9,6 +9,7 @@ public class NGODonation implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
+        System.out.println("NGODonation cost is "+getPrice());
 
     }
 

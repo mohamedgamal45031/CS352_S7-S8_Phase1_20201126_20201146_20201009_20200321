@@ -9,7 +9,7 @@ public class CancerHospitalDonation implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("CancerHospitalDonation cost is "+getPrice());
     }
 
     @Override

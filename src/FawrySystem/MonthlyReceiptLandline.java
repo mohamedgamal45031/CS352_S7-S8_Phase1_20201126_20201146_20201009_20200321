@@ -9,7 +9,7 @@ public class MonthlyReceiptLandline implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("MonthlyReceiptLandline cost is "+getPrice());
     }
 
     @Override

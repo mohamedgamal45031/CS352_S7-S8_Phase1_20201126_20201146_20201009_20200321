@@ -12,7 +12,7 @@ public class OrangeRechrage implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("OrangeRechrage cost is "+getPrice());
     }
 
     @Override
