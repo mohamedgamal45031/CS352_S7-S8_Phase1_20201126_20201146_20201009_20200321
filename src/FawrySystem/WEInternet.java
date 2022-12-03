@@ -13,7 +13,7 @@ public class WEInternet implements IServiceStrategy{
 
     @Override
     public void ExecuteService() {
-
+        System.out.println("WEInternet cost is "+getPrice());
     }
 
     @Override
