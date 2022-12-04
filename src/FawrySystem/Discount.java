@@ -3,11 +3,15 @@ package FawrySystem;
 public class Discount implements IServiceStrategy{
     private double discount;
     private IServiceStrategy discountedservice;
+    private String name;
 
     public Discount(double discount,IServiceStrategy discountedservice) {
         this.discount=discount;
         this.discountedservice=discountedservice;
-
+        this.name= discountedservice.getName();
+    }
+    public String getName(){
+        return name;
     }
 
     @Override
