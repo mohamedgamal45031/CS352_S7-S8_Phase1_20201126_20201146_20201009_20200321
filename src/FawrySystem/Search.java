@@ -1,6 +1,8 @@
 package FawrySystem;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Search {
@@ -26,8 +28,22 @@ public class Search {
         serviceHashMap.put("VodafoneRechrage", new VodafoneRechrage());
 
     }
-    public  IServiceStrategy getService(String s){
-        return serviceHashMap.get(s);
+    //recharge
+    public Map<Integer,IServiceStrategy> getService(String s){//oragne
+        Map<Integer, IServiceStrategy> ans = new HashMap<>();
+        int i = 1;
+        for (Map.Entry<String, IServiceStrategy> pair :
+                serviceHashMap.entrySet()) {
+                if(pair.getKey().contains(s)) {
+                    ans.put(i,pair.getValue());
+                    i++;
+                }
+        }
+        /*
+        * 1- orangeInternet
+        * 2- orange RECHARGE
+        * */
+        return ans;
     }
 
     public void setDiscountOverAllServices (double dicount){

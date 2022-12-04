@@ -1,6 +1,7 @@
 package FawrySystem;
 
 public class WERechrage implements IServiceStrategy{
+    private String name = "WERechrage";
 
     private double price;
 
@@ -19,5 +20,9 @@ public class WERechrage implements IServiceStrategy{
     @Override
     public double getPrice() {
         return price;
+    }
+
+    public String getName() {
+        return name;
     }
 }

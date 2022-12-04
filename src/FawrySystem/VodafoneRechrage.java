@@ -1,6 +1,7 @@
 package FawrySystem;
 
 public class VodafoneRechrage implements IServiceStrategy{
+    private String name = "VodafoneRechrage";
 
     private double price;
 
@@ -21,5 +22,8 @@ public class VodafoneRechrage implements IServiceStrategy{
     @Override
     public double getPrice() {
         return price;
+    }
+    public String getName() {
+        return name;
     }
 }

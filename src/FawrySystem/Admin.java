@@ -12,7 +12,7 @@ public class Admin {
 
     public void setDiscount(String s,double discount){
         Search search=Search.getInstance();
-        search.putService(s,new Discount(discount,search.getService(s)));
+//        search.putService(s,new Discount(discount,search.getService(s)));
     }
     public void setDiscountForAllServices(double discount){
         Search search=Search.getInstance();

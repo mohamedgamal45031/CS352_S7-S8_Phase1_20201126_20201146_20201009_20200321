@@ -2,6 +2,10 @@ package FawrySystem;
 
 public class MonthlyReceiptLandline implements IServiceStrategy{
     private double price;
+    private String name = "MonthlyReceiptLandline";
+    public String getName() {
+        return name;
+    }
 
     public MonthlyReceiptLandline() {
         this.price = 100.0;
