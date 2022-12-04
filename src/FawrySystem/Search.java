@@ -39,10 +39,7 @@ public class Search {
                     i++;
                 }
         }
-        /*
-        * 1- orangeInternet
-        * 2- orange RECHARGE
-        * */
+
         return ans;
     }
 

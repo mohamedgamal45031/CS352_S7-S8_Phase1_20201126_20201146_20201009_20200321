@@ -1,5 +1,8 @@
 package FawrySystem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Admin {
 
     /*-
@@ -9,8 +12,22 @@ public class Admin {
     private String email;
     private String password;
 
+    private List<Refund> refunds = new ArrayList<>();
 
-    public void setDiscount(String s,double discount){
+    public List<Refund> getRefunds() {
+        return refunds;
+    }
+
+    public void addRefund(Refund r) {
+        refunds.add(r);
+    }
+
+    public Admin(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+
+    public void setDiscount(String s, double discount){
         Search search=Search.getInstance();
 //        search.putService(s,new Discount(discount,search.getService(s)));
     }

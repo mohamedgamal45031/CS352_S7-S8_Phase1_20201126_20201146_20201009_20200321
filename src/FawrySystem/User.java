@@ -1,5 +1,8 @@
 package FawrySystem;
 
+import java.security.cert.TrustAnchor;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -13,6 +16,7 @@ public class User {
     private double walletBalance = 0.0;
     private double overAllDicount;
 
+    private List<Transaction> transactions =new ArrayList<>();
 
     public User() {
         overAllDicount = 0;
@@ -27,6 +31,17 @@ public class User {
         this.userName = userName;
         this.email = email;
         this.password = password;
+    }
+
+    public Transaction getTransaction(int ind) {
+        return transactions.get(ind);
+    }
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void addTransactions(Transaction tr) {
+        this.transactions.add(tr);
     }
 
     public void PayForService() {
@@ -64,4 +79,26 @@ public class User {
     }
 
 
+
+
+
+    public String getEmail() {
+        return email;
+    }
+    public List<Transaction> getRefundableRequests(){
+        List<Transaction>list = new ArrayList<>();
+        for (Transaction t :transactions){
+            if(!t.isRefundRequested()){
+                list.add(t);
+            }
+        }
+        return list;
+    }
+    public String getPassword() {
+        return password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
 }
