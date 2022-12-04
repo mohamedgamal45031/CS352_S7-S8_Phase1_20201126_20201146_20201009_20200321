@@ -2,8 +2,8 @@ package FawrySystem;
 
 public interface ServiceProvider {
 
-    void handler();
-    void showPaymentForm();
-    String getName();
+    public void handler();
+    public void showPaymentForm();
+    public String getName();
 
 }

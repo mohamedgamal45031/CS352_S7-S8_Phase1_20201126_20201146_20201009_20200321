@@ -1,6 +1,5 @@
 package FawrySystem;
 
-import java.security.cert.TrustAnchor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +15,7 @@ public class User {
     private double walletBalance = 0.0;
     private double overAllDicount;
 
-    private List<Transaction> transactions =new ArrayList<>();
+    private List<Transaction> transactions =new ArrayList<Transaction>();
 
     public User() {
         overAllDicount = 0;
@@ -39,11 +38,9 @@ public class User {
     public List<Transaction> getTransactions() {
         return transactions;
     }
-
     public void addTransactions(Transaction tr) {
         this.transactions.add(tr);
     }
-
     public void PayForService() {
         service.ExecuteService();
     }
@@ -77,11 +74,6 @@ public class User {
         this.overAllDicount = overAllDicount;
 
     }
-
-
-
-
-
     public String getEmail() {
         return email;
     }

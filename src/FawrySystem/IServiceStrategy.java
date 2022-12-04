@@ -1,7 +1,7 @@
 package FawrySystem;
 
 public interface IServiceStrategy {
-     void ExecuteService();
-     double getPrice();
-     String getName();
+   public void ExecuteService();
+   public  double getPrice();
+   public String getName();
 }

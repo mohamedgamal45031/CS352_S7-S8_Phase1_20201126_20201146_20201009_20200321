@@ -8,7 +8,7 @@ import java.util.Map;
 public class Search {
 
     private Map<String, IServiceStrategy> serviceHashMap;
-    private static Search instance = new Search();
+    public static Search instance = new Search();
 
 
     private Search(){

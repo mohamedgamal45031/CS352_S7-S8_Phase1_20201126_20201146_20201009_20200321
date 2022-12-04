@@ -44,7 +44,7 @@ public class Main {
                     } else if (discountOption == 2) {
                         System.out.println("Enter Percentage for All Services");
                         int percent = sc.nextInt();
-                        mhmdSamir.setDiscountForAllServices(percent);
+                        mhmdSamir.setDiscountForAllServices((double)percent/100);
                     }
 
                 } else if (option == 3) {
@@ -155,7 +155,7 @@ public class Main {
                             Transaction t = refundableRequests.get(i);
                             System.out.println((i + 1) + " - " + t.getTransactionName() + " " + t.getAmount());
                         }
-                        System.out.println("Choose Transaction to Make Refund Request!");
+                        System.out.println("Choose FawrySystem.Transaction to Make Refund Request!");
                         Scanner newScanner = new Scanner(System.in);
                         int refund = newScanner.nextInt();
                         String transactionName = refundableRequests.get(refund - 1).getTransactionName();

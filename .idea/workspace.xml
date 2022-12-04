@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+    <list default="true" id="ec2545f5-4dbf-48aa-bf56-c0f41d0f55ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/CancerHospitalDonation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/CreditCardProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/Discount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/EtisalatInternet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/EtisalatRechrage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/IServiceStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/MonthlyReceiptLandline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/NGODonation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/OrangeInternet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/OrangeRechrage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/QuarterReceiptLandline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/SchoolDonation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/Search.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/ServiceProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/VodafoneCashProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/VodafoneInternet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/VodafoneRechrage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/WEInternet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-/FawrySystem/WERechrage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321.-.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/CancerHospitalDonation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/CancerHospitalDonation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/CreditCardProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/CreditCardProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Discount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Discount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/EtisalatInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/EtisalatInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/EtisalatRechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/EtisalatRechrage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/IServiceStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/IServiceStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/MonthlyReceiptLandline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/MonthlyReceiptLandline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/NGODonation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/NGODonation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/OrangeInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/OrangeInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/OrangeRechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/OrangeRechrage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/QuarterReceiptLandline.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/QuarterReceiptLandline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Refund.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Refund.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/SchoolDonation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/SchoolDonation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Search.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/ServiceProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/ServiceProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/VodafoneCashProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/VodafoneCashProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/VodafoneInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/VodafoneInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/VodafoneRechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/VodafoneRechrage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/WEInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/WEInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/WERechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321/FawrySystem/WERechrage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FawrySystem/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FawrySystem/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FawrySystem/IServiceStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FawrySystem/IServiceStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FawrySystem/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FawrySystem/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FawrySystem/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FawrySystem/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FawrySystem/ServiceProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FawrySystem/ServiceProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FawrySystem/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FawrySystem/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,39 +45,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2ISRy70rGpOnNzvZl2a9aePjocm" />
+  <component name="ProjectId" id="2ISo4vIwytddpCpEOgN2eVOpJZD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FawrySystem.Main" />
@@ -97,11 +83,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="" />
-      <created>1670173251565</created>
+      <changelist id="ec2545f5-4dbf-48aa-bf56-c0f41d0f55ce" name="Changes" comment="" />
+      <created>1670184163272</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670173251565</updated>
+      <updated>1670184163272</updated>
     </task>
     <servers />
   </component>
