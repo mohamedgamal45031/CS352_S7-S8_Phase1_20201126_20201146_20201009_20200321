@@ -1,8 +1,17 @@
 package FawrySystem;
 
-public class VodafoneRechrage implements IServiceStrategy{
+public class VodafoneRechrage implements IServiceStrategy {
     private String name = "VodafoneRechrage";
+    private boolean acceptCash = false;
 
+
+    public void setAcceptCash(boolean acceptCash) {
+        this.acceptCash = acceptCash;
+    }
+
+    public boolean isAcceptCash() {
+        return acceptCash;
+    }
     private double price;
 
     public VodafoneRechrage() {

@@ -1,5 +1,7 @@
 package FawrySystem;
 
+import FawrySystem.User;
+
 public class Refund {
     private String description;
     private double amount;

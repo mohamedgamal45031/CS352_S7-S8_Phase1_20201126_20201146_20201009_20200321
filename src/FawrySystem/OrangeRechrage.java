@@ -3,7 +3,16 @@ package FawrySystem;
 public class OrangeRechrage implements IServiceStrategy{
 
     private String name = "OrangeRechrage";
+    private boolean acceptCash = false;
 
+
+    public void setAcceptCash(boolean acceptCash) {
+        this.acceptCash = acceptCash;
+    }
+
+    public boolean isAcceptCash() {
+        return acceptCash;
+    }
     private double price;
 
     public OrangeRechrage() {

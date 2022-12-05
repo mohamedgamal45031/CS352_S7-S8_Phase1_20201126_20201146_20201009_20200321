@@ -4,6 +4,16 @@ public class SchoolDonation implements IServiceStrategy{
     private String name = "SchoolDonation";
 
     private double price;
+    private boolean acceptCash = true;
+
+
+    public void setAcceptCash(boolean acceptCash) {
+        this.acceptCash = acceptCash;
+    }
+
+    public boolean isAcceptCash() {
+        return acceptCash;
+    }
 
     public SchoolDonation() {
         this.price = 100.0;

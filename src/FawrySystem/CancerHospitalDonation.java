@@ -2,6 +2,16 @@ package FawrySystem;
 
 public class CancerHospitalDonation implements IServiceStrategy{
     private double price;
+    private boolean acceptCash = true;
+
+
+    public void setAcceptCash(boolean acceptCash) {
+        this.acceptCash = acceptCash;
+    }
+
+    public boolean isAcceptCash() {
+        return acceptCash;
+    }
     private String name = "CancerHospitalDonation";
     public String getName() {
         return name;

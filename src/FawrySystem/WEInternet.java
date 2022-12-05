@@ -1,10 +1,19 @@
 package FawrySystem;
 
-public class WEInternet implements IServiceStrategy{
+public class WEInternet implements IServiceStrategy {
     private String name = "WEInternet";
 
     private double price;
+    private boolean acceptCash = false;
 
+
+    public void setAcceptCash(boolean acceptCash) {
+        this.acceptCash = acceptCash;
+    }
+
+    public boolean isAcceptCash() {
+        return acceptCash;
+    }
     public WEInternet() {
         this.price = 100.0;
     }

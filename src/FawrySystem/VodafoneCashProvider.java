@@ -2,7 +2,7 @@ package FawrySystem;
 
 import java.util.Scanner;
 
-public class VodafoneCashProvider implements ServiceProvider{
+public class VodafoneCashProvider implements ServiceProvider {
 
     private String name  = "Vodafone Cash";
 

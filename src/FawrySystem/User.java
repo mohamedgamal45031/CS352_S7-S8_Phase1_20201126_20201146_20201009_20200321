@@ -52,8 +52,7 @@ public class User {
     }
     public void setService(String ss) {
         Search search = Search.getInstance();
-        Map<Integer,IServiceStrategy> map = search.getService(ss);
-
+        Map<Integer, IServiceStrategy> map = search.getService(ss);
         for (Map.Entry<Integer, IServiceStrategy> set :
                 map.entrySet()) {
             System.out.print(set.getKey()+" - ");
@@ -63,9 +62,6 @@ public class User {
         System.out.println("Enter Num of Service to Select");
         int serviceNum = myObj.nextInt();
         service = map.get(serviceNum);
-        ///////////////////////////
-
-
     }
     public IServiceStrategy getService(){
         return service;
