@@ -1,7 +1,7 @@
 package FawrySystem;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -16,6 +16,10 @@ public class FawrySystem {
         // flag for successful or not
         List<Integer> list = new ArrayList<Integer>();
         if (option == 1) {
+
+            System.out.println("admin email ----->  MohamedSamir@gmail.com");
+            System.out.println("password    ----->  123456                ");
+
             System.out.println("Enter Email");
             String email = stringScanner.nextLine();
             System.out.println("Enter Password");
@@ -113,7 +117,8 @@ public class FawrySystem {
                     admin = false;
                 } else if (option == 2) {
                     System.out.println("1 - For Specific Discount For One Service");
-                    System.out.println("2 - For Overall Discount For All Services");
+                    System.out.println("2 - For Overall Discount For All Services for All users");
+                    System.out.println("3 - For Overall Discount For All Services for one user");
                     int discountOption = sc.nextInt();
                     if (discountOption == 1) {
                         Scanner scanner = new Scanner(System.in);
@@ -126,15 +131,25 @@ public class FawrySystem {
                         System.out.println("Enter Percentage for All Services");
                         int percent = sc.nextInt();
                         mhmdSamir.setDiscountForAllServices((double) percent / 100);
+                    } else if (discountOption == 3) {
+                        System.out.println("Enter Percentage for All Services");
+                        int percent = sc.nextInt();
+                        System.out.println("choose ur user ");
+                        for (int i = 0; i < users.size(); i++) {
+                            System.out.println(i + " " + users.get(i).getUserName());
+
+                        }
+                        int user_num = sc.nextInt();
+                        double dis = (double) percent / 100;
+                        mhmdSamir.setDiscountForOneUser((double) dis, users.get(user_num));
                     }
 
                 } else if (option == 3) {
                     int ind = 1;
                     List<Integer> removeRefunds = new ArrayList<>();
-                    if(mhmdSamir.getRefunds().size()==0){
+                    if (mhmdSamir.getRefunds().size() == 0) {
                         System.out.println("No Refund To Show!");
-                    }
-                    else{
+                    } else {
                         for (Refund r : mhmdSamir.getRefunds()) {
                             System.out.println(r.getDescription() + " " + r.getAmount() + " " + r.getUser().getUserName());
                             System.out.println("Do you want to Refund?");
@@ -158,7 +173,7 @@ public class FawrySystem {
 
                         }
                         for (int i = removeRefunds.size() - 1; i >= 0; i--) {
-                            System.out.println("Fund Number " + i + " Has Been Removed");
+                            System.out.println("Fund Number " + i + 1 + " Has Been Removed");
                             mhmdSamir.getRefunds().remove(i);
                         }
                     }
@@ -206,20 +221,23 @@ public class FawrySystem {
                             ServiceProvider currentServiceProvider = serviceProviders.get(numService - 1);
                             currentServiceProvider.handler();
                             tr.setTransactionName(currentUserService.getName());
-                            tr.setAmount(currentUserService.getPrice());
+                            tr.setAmount(currentUserService.getPrice() - (currentUserService.getPrice() * currentUser.getOverAllDicount()));
                             currentUser.addTransactions(tr);
+
+                            System.out.println("you've paid " + tr.getAmount() + " $ " + "for using " + tr.getTransactionName());
+
                         } else if (numService == 3) {
-                            if (currentUser.getWalletBalance() < currentUserService.getPrice()) {
+                            if (currentUser.getWalletBalance() < currentUserService.getPrice() - (currentUser.getOverAllDicount() * currentUserService.getPrice())) {
                                 System.out.println("Your wallet balance is not enough !!!!!");
                             } else {
                                 double walletBalance = currentUser.getWalletBalance();
-                                double price = currentUserService.getPrice();
+                                double price = currentUserService.getPrice() - (currentUser.getOverAllDicount() * currentUserService.getPrice());
                                 System.out.println("Your wallet balance is : " + walletBalance);
                                 System.out.println("Your service cost is : " + price);
                                 currentUser.setWalletBalance(walletBalance - price);
                                 System.out.println("Your wallet balance after make payment : " + currentUser.getWalletBalance());
                                 tr.setTransactionName(currentUserService.getName());
-                                tr.setAmount(currentUserService.getPrice());
+                                tr.setAmount(currentUserService.getPrice() - (currentUser.getOverAllDicount() * currentUserService.getPrice()));
                                 currentUser.addTransactions(tr);
 
                             }
@@ -276,12 +294,12 @@ public class FawrySystem {
                     if (listOfCases.get(0) == 1) {
                         //admin login successfully
                         if (listOfCases.get(1) == 1) {
-                            admin=true;
+                            admin = true;
                             signedIn = true;
                         }
                         //admin login unsuccessfully
                         else {
-                            admin=false;
+                            admin = false;
                             signedIn = false;
 
                         }
@@ -291,11 +309,11 @@ public class FawrySystem {
                         //user login successfully
                         if (listOfCases.get(1) == 1) {
                             signedIn = true;
-                            currentUser =users.get(listOfCases.get(2));
+                            currentUser = users.get(listOfCases.get(2));
                         }
                         //user login unsuccessfully
                         else {
-                            currentUser =null;
+                            currentUser = null;
                             signedIn = false;
                         }
                     }

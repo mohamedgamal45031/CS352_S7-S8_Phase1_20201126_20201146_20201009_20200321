@@ -41,6 +41,14 @@ public class Search {
         return ans;
     }
 
+    public IServiceStrategy getServiceByName(String s){
+
+       return serviceHashMap.get(s);
+
+
+    }
+
+
     public void setDiscountOverAllServices (double dicount){
 
         serviceHashMap.put("NGODonation", new Discount(dicount,serviceHashMap.get("NGODonation")));

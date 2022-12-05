@@ -20,13 +20,20 @@ public class User {
     public User() {
         overAllDicount = 0;
     }
+    public double getOverAllDicount(){
+        return overAllDicount;
+
+    }
 
     public User(String email, String password) {
+        overAllDicount=0;
         this.email = email;
         this.password = password;
     }
 
     public User(String userName, String email, String password) {
+        overAllDicount=0;
+
         this.userName = userName;
         this.email = email;
         this.password = password;
