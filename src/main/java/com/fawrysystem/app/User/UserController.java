@@ -11,10 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping("api/user")
 public class UserController {
-    private UserModel userModel;
+
     private Search search ;
-    private IServiceStrategy service;
-    private List<Transaction> transactions = new ArrayList<Transaction>();
+
     private UserServices userServices;
     @Autowired
     public UserController(UserServices userServices) {
@@ -37,41 +36,15 @@ public class UserController {
     *   "to":"Mom"
     * }
     *  */
-    @PostMapping
-    public void setService(@RequestBody String s) {
-        service = search.getServiceByName(s);
+    @GetMapping("refundable/{username}")
+   // @GetMapping(path = "transaction/{id}")
+    public List<Transaction> refundableRequest(@PathVariable("username") String name){
+        return userServices.getRefundableRequests(name);
     }
 
-    @GetMapping("refundable")
-    public List<Transaction> getRefundableRequests(){
-        List<Transaction>list = new ArrayList<>();
-        for (Transaction t :transactions){
-            if(!t.isRefundRequested()){
-                list.add(t);
-            }
-        }
-        return list;
-    }
-
-    @GetMapping(path = "transaction/{id}")
-    public Transaction getTransaction(@PathVariable("id")int ind) {
-        return transactions.get(ind);
-    }
-    @GetMapping("transactions")
-
-    public List<Transaction> getTransactions() {
-        return transactions;
-    }
-    @PostMapping()
-    public void addTransactions(@RequestBody Transaction tr) {
-        this.transactions.add(tr);
-    }
-    public IServiceStrategy getService(){
-        return service;
-    }
-    public void PayForService() {
-        service.ExecuteService();
-    }
+//    public void PayForService() {
+//        service.ExecuteService();
+//    }
 
 }
 

@@ -10,7 +10,7 @@ import java.util.*;
 public class UserServices {
     private ArrayList<UserModel> users = new ArrayList<UserModel>(
             List.of(
-                    new UserModel("gemy", "gemy@gmail.com", "123456"),
+                    new UserModel("gemy", "gemy@gmail.com", "123456",new ArrayList<>(List.of(new Transaction("vodfa",40,true),new Transaction("gamy",50,false)))),
                     new UserModel("omar", "omar@gmail.com", "123456"),
                     new UserModel("adool", "adool@gmail.com", "123456"),
                     new UserModel("zizo", "zizo@gmail.com", "123456")
@@ -27,6 +27,18 @@ public class UserServices {
         }
         return null;
 
+    }
+    public List<Transaction> getRefundableRequests(String name){
+        List<Transaction> list = new ArrayList<>();
+        UserModel user =getUserWithUsername(name);
+        if(user!=null) {
+            for (Transaction t : user.getTransactions()) {
+                if (!t.isRefundRequested()) {
+                    list.add(t);
+                }
+            }
+        }
+        return list;
     }
     UserModel getUserWithEmail(String email){
         for (UserModel user : users) {

@@ -1,6 +1,14 @@
 package com.fawrysystem.app.User;
 
 
+import com.fawrysystem.app.Service.IServiceStrategy;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class UserModel {
     private String userName;
     private String email;
@@ -8,8 +16,16 @@ public class UserModel {
     private String creditCardNumber;
     private double walletBalance = 0.0;
     private double overallDiscount = 0.0;
-
+    private IServiceStrategy service;
+    private List<Transaction> transactions = new ArrayList<Transaction>();
     public UserModel() {
+    }
+
+    public UserModel(String userName, String email, String password, List<Transaction> transactions) {
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.transactions = transactions;
     }
 
     public UserModel(String userName, String email, String password, String creditCardNumber, double walletBalance, double overallDiscount) {
@@ -70,6 +86,19 @@ public class UserModel {
 
     public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
+    }
+    public Transaction getTransaction( int ind) {
+        return transactions.get(ind);
+    }
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public void addTransactions( Transaction tr) {
+        this.transactions.add(tr);
+    }
+    public IServiceStrategy getService(){
+        return service;
     }
 
 }

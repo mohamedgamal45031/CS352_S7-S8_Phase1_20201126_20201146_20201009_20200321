@@ -33,4 +33,10 @@ public class Transaction {
         this.transactionName = transactionName;
         this.amount = amount;
     }
+
+    public Transaction(String transactionName, double amount, boolean refundRequested) {
+        this.transactionName = transactionName;
+        this.amount = amount;
+        this.refundRequested = refundRequested;
+    }
 }
