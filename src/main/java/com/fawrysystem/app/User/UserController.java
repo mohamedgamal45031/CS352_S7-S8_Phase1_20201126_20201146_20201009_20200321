@@ -1,17 +1,20 @@
 package com.fawrysystem.app.User;
 
 import com.fawrysystem.app.Search.Search;
+import com.fawrysystem.app.Service.IServiceStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import java.util.*;
-import static java.lang.Double.parseDouble;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("api/user")
 public class UserController {
     private UserModel userModel;
-    private  Search search ;
-
+    private Search search ;
+    private IServiceStrategy service;
+    private List<Transaction> transactions = new ArrayList<Transaction>();
     private UserServices userServices;
     @Autowired
     public UserController(UserServices userServices) {
@@ -19,21 +22,13 @@ public class UserController {
         this.search = Search.getInstance();
     }
     @GetMapping("all")
-    public List<UserModel> getAllUsers(){
+    public List<UserModel>getAllUsers(){
         return userServices.getUsers();
     }
 
-
-    @GetMapping(path = "check/{id}")
-    public UserModel checkIfExists(@PathVariable("id") String id){
-//        this.userModel = userServices.getUserWithId(id);//current user
-        return userServices.getUserWithId(id) != null ?
-                userServices.getUserWithId(id) : null;
-    }
-    @GetMapping(path = "check/{userName}")
-    public UserModel checkIfExistsWithUserName(@PathVariable("userName") String userName){
-        return userServices.getUserWithUsername(userName) != null ?
-                userServices.getUserWithUsername(userName) : null;
+    @GetMapping(path = "check/{username}")
+    public UserModel checkIfExists(@PathVariable("username") String username){
+        return userServices.getUserWithUsername(username) != null ? userServices.getUserWithUsername(username):null;
     }
     /*
     * {
@@ -42,107 +37,41 @@ public class UserController {
     *   "to":"Mom"
     * }
     *  */
-    @PostMapping("{id}/service")
-    public void setService(@PathVariable("id") String id,@RequestBody String s) {
-        if(checkIfExists(id)!= null){
-            checkIfExists(id).setService(search.getServiceByName(s));
-        }
+    @PostMapping
+    public void setService(@RequestBody String s) {
+        service = search.getServiceByName(s);
     }
 
-    @GetMapping("{id}/refundable")
-    public List<Transaction> getRefundableRequests(@PathVariable("id") String id){
+    @GetMapping("refundable")
+    public List<Transaction> getRefundableRequests(){
         List<Transaction>list = new ArrayList<>();
-        if(checkIfExists(id)!= null) {
-            for (Transaction t :checkIfExists(id).getTransactions()){
-                if(!t.isRefundRequested()){
-                    list.add(t);
-                }
+        for (Transaction t :transactions){
+            if(!t.isRefundRequested()){
+                list.add(t);
             }
         }
         return list;
     }
 
-    @GetMapping(path = "{id}/transaction/{id}")
-    public Transaction getTransaction(@PathVariable("id") String id,@PathVariable("id")int ind) {
-        if(checkIfExists(id)!= null){
-            return checkIfExists(id).getTransaction(ind);
-        }
-        return null;
+    @GetMapping(path = "transaction/{id}")
+    public Transaction getTransaction(@PathVariable("id")int ind) {
+        return transactions.get(ind);
     }
-    @GetMapping("{id}/transactions")
+    @GetMapping("transactions")
 
-    public List<Transaction> getTransactions(@PathVariable("id") String id) {
-        if(checkIfExists(id)!= null){
-            return checkIfExists(id).getTransactions();
-        }
-        return null;
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
-    @PostMapping("{id}/transaction")
-    public void addTransactions(@PathVariable("id") String id,@RequestBody Transaction tr) {
-        if(checkIfExists(id)!= null){
-            checkIfExists(id).addTransactions(tr);
-        }
+    @PostMapping()
+    public void addTransactions(@RequestBody Transaction tr) {
+        this.transactions.add(tr);
     }
-    @PostMapping("{id}/overallDiscount")
-
-    public void setOverallDiscount(@PathVariable("id") String id,@RequestBody String overallDiscount) {
-        if(checkIfExists(id)!= null){
-            checkIfExists(id).setOverallDiscount(parseDouble(overallDiscount));
-        }
-
+    public IServiceStrategy getService(){
+        return service;
     }
-    @PostMapping("{id}/walletBalance")
-
-    public void setWalletBalance(@PathVariable("id") String id,@RequestBody String x) {
-        if(checkIfExists(id)!= null){
-            checkIfExists(id).setWalletBalance(parseDouble(x));
-        }
-
+    public void PayForService() {
+        service.ExecuteService();
     }
-    @GetMapping("{id}/walletBalance")
-
-    public double getWalletBalance(@PathVariable("id") String id) {
-        if(checkIfExists(id)!= null){
-            return checkIfExists(id).getWalletBalance();
-        }
-        return -1;
-    }
-    @GetMapping("{id}/email")
-
-    public String getEmail(@PathVariable("id") String id) {
-        if(checkIfExists(id)!= null){
-            return checkIfExists(id).getEmail();
-        }
-        return "";
-    }
-
-    @GetMapping("{id}/password")
-    public String getPassword(@PathVariable("id") String id) {
-        if(checkIfExists(id)!= null){
-            return checkIfExists(id).getPassword();
-        }
-        return "";
-    }
-    @GetMapping("{id}/username")
-
-    public String getUserName(@PathVariable("id") String id) {
-        if(checkIfExists(id)!= null){
-            return checkIfExists(id).getUserName();
-        }
-        return "";
-    }
-    @GetMapping("{id}/service")
-
-    public String getService(@PathVariable("id") String id){
-        if(checkIfExists(id)!=null){
-            this.userModel.getService().getName();
-            return checkIfExists(id).getService().getName();
-        }
-        return "";
-    }
-//    public void PayForService() {
-//        this.userModel.getService().ExecuteService();
-//    }
 
 }
 

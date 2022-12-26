@@ -29,13 +29,6 @@ public class Transaction {
     }
     public Transaction() {
     }
-
-    public Transaction(String transactionName, double amount, boolean refundRequested) {
-        this.transactionName = transactionName;
-        this.amount = amount;
-        this.refundRequested = refundRequested;
-    }
-
     public Transaction(String transactionName, double amount) {
         this.transactionName = transactionName;
         this.amount = amount;

@@ -1,41 +1,14 @@
 package com.fawrysystem.app.User;
 
 
-import com.fawrysystem.app.Service.IServiceStrategy;
-
-import java.util.*;
-
 public class UserModel {
-    private long id;
     private String userName;
     private String email;
     private String password;
     private String creditCardNumber;
     private double walletBalance = 0.0;
     private double overallDiscount = 0.0;
-    private IServiceStrategy service;
-    private List<Transaction> transactions = new ArrayList<Transaction>();
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public Transaction getTransaction(int ind) {
-        return transactions.get(ind);
-    }
-
-
-    public List<Transaction> getTransactions() {
-        return transactions;
-    }
-
-    public void addTransactions( Transaction tr) {
-        this.transactions.add(tr);
-    }
     public UserModel() {
     }
 
@@ -62,13 +35,6 @@ public class UserModel {
         this.password = password;
     }
 
-    public UserModel(long id, String userName, String email, String password) {
-        this.id = id;
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
-    }
-
     public double getOverallDiscount() {
         return overallDiscount;
 
@@ -82,6 +48,10 @@ public class UserModel {
         return walletBalance;
     }
 
+    public void setOverallDiscount(double overallDiscount) {
+        this.overallDiscount = overallDiscount;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -92,18 +62,6 @@ public class UserModel {
 
     public String getUserName() {
         return userName;
-    }
-
-    public void setOverallDiscount(double overallDiscount) {
-        this.overallDiscount = overallDiscount;
-    }
-
-    public IServiceStrategy getService() {
-        return service;
-    }
-
-    public void setService(IServiceStrategy service) {
-        this.service = service;
     }
 
     public String getCreditCardNumber() {
