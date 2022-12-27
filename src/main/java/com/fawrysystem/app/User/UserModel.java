@@ -101,4 +101,11 @@ public class UserModel {
         return service;
     }
 
+    @Override
+    public String toString() {
+        return "UserModel{" +
+                "userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

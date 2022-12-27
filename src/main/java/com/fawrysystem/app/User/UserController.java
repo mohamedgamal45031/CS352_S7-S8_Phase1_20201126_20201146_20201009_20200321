@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @GetMapping(path = "check/{username}")
-    public UserModel checkIfExists(@PathVariable("username") String username){
+    public String checkIfExists(@PathVariable("username") String username){
         return userServices.getUserWithUsername(username) != null ? userServices.getUserWithUsername(username):null;
     }
     /*

@@ -19,7 +19,7 @@ public class UserServices {
     List<UserModel>getUsers(){
         return users;
     }
-    UserModel getUserWithUsername(String username){
+    UserModel getUser(String username){
         for (UserModel user : users) {
             if (user.getUserName().equals(username)) {
                 return user;
@@ -28,9 +28,18 @@ public class UserServices {
         return null;
 
     }
+    String getUserWithUsername(String username){
+        for (UserModel user : users) {
+            if (user.getUserName().equals(username)) {
+                return user.toString();
+            }
+        }
+        return null;
+
+    }
     public List<Transaction> getRefundableRequests(String name){
         List<Transaction> list = new ArrayList<>();
-        UserModel user =getUserWithUsername(name);
+        UserModel user =getUser(name);
         if(user!=null) {
             for (Transaction t : user.getTransactions()) {
                 if (!t.isRefundRequested()) {
