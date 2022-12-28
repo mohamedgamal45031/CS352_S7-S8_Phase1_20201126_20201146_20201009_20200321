@@ -1,5 +1,6 @@
 package com.fawrysystem.app.User;
 
+import com.fawrysystem.app.Search.Search;
 import org.apache.catalina.User;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -8,6 +9,7 @@ import org.springframework.web.server.UnsupportedMediaTypeStatusException;
 import java.util.*;
 @Service
 public class UserServices {
+    public static UserServices instance = new UserServices();
     private ArrayList<UserModel> users = new ArrayList<UserModel>(
             List.of(
                     new UserModel("gemy", "gemy@gmail.com", "123456",new ArrayList<>(List.of(new Transaction("vodfa",40,true),new Transaction("gamy",50,false)))),
@@ -51,11 +53,19 @@ public class UserServices {
     }
     UserModel getUserWithEmail(String email){
         for (UserModel user : users) {
-            if (user.getUserName().equals(email)) {
+            if (user.getEmail().equals(email)) {
                 return user;
             }
         }
         return null;
+    }
+
+    void signUp(UserModel userModel ){
+        users.add(userModel);
+    }
+
+    public static UserServices getInstance(){
+        return instance;
     }
 
 

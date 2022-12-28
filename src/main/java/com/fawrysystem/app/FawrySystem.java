@@ -39,7 +39,8 @@ public class FawrySystem {
                 list.add(0);
                 System.out.println("Wrong Credentials");
             }
-        } else if (option == 2) {
+        }
+        else if (option == 2) {
             System.out.println("Enter Email");
             String email = stringScanner.nextLine();
             System.out.println("Enter Password");

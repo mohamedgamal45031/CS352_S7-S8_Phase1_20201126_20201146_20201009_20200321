@@ -13,11 +13,12 @@ import java.util.List;
 public class UserController {
 
     private Search search ;
+    private UserView userView;
 
     private UserServices userServices;
-    @Autowired
-    public UserController(UserServices userServices) {
-        this.userServices = userServices;
+
+    public UserController() {
+        this.userServices = UserServices.getInstance();
         this.search = Search.getInstance();
     }
     @GetMapping("all")
@@ -28,6 +29,10 @@ public class UserController {
     @GetMapping(path = "check/{username}")
     public String checkIfExists(@PathVariable("username") String username){
         return userServices.getUserWithUsername(username) != null ? userServices.getUserWithUsername(username):null;
+    }
+    @GetMapping(path = "check/{email}")
+    public UserModel checkIfExistsWithEmail(@PathVariable("email") String email){
+        return userServices.getUserWithEmail(email) != null ? userServices.getUserWithEmail(email) : null;
     }
     /*
     * {
@@ -41,7 +46,17 @@ public class UserController {
     public List<Transaction> refundableRequest(@PathVariable("username") String name){
         return userServices.getRefundableRequests(name);
     }
-
+    @PostMapping("signUp")
+    public boolean signUp(@RequestBody UserModel userModel){
+        //user not found so can be sign up
+        if(checkIfExistsWithEmail(userModel.getEmail())==null){
+            userServices.signUp(userModel);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 //    public void PayForService() {
 //        service.ExecuteService();
 //    }
