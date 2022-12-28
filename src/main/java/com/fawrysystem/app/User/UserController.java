@@ -13,12 +13,10 @@ import java.util.List;
 public class UserController {
 
     private Search search ;
-    private UserView userView;
-
     private UserServices userServices;
 
-    public UserController() {
-        this.userServices = UserServices.getInstance();
+    public UserController(UserServices userServices) {
+        this.userServices = userServices;
         this.search = Search.getInstance();
     }
     @GetMapping("all")

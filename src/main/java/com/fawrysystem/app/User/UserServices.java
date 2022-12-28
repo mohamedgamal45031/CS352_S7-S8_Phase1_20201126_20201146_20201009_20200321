@@ -9,7 +9,6 @@ import org.springframework.web.server.UnsupportedMediaTypeStatusException;
 import java.util.*;
 @Service
 public class UserServices {
-    public static UserServices instance = new UserServices();
     private ArrayList<UserModel> users = new ArrayList<UserModel>(
             List.of(
                     new UserModel("gemy", "gemy@gmail.com", "123456",new ArrayList<>(List.of(new Transaction("vodfa",40,true),new Transaction("gamy",50,false)))),
@@ -64,9 +63,6 @@ public class UserServices {
         users.add(userModel);
     }
 
-    public static UserServices getInstance(){
-        return instance;
-    }
 
 
 }

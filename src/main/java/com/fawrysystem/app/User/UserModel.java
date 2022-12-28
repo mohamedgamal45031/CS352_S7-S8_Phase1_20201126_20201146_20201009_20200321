@@ -15,8 +15,8 @@ public class UserModel {
     private String password;
     private String creditCardNumber;
     private double walletBalance = 0.0;
-    private double overallDiscount = 0.0;
-    private IServiceStrategy service;
+    /*private double overallDiscount = 0.0;*/
+   /* private IServiceStrategy service;*/
     private List<Transaction> transactions = new ArrayList<Transaction>();
     public UserModel() {
     }
@@ -34,11 +34,11 @@ public class UserModel {
         this.password = password;
         this.creditCardNumber = creditCardNumber;
         this.walletBalance = walletBalance;
-        this.overallDiscount = overallDiscount;
+//        this.overallDiscount = overallDiscount;
     }
 
     public UserModel(String userName, String email, String password) {
-        overallDiscount = 0;
+//        overallDiscount = 0;
 
         this.userName = userName;
         this.email = email;
@@ -46,15 +46,14 @@ public class UserModel {
     }
 
     public UserModel(String email, String password) {
-        overallDiscount = 0;
+//        overallDiscount = 0;
         this.email = email;
         this.password = password;
     }
 
-    public double getOverallDiscount() {
+   /* public double getOverallDiscount() {
         return overallDiscount;
-
-    }
+    }*/
 
     public void setWalletBalance(double x) {
         this.walletBalance = x;
@@ -64,9 +63,9 @@ public class UserModel {
         return walletBalance;
     }
 
-    public void setOverallDiscount(double overallDiscount) {
+    /*public void setOverallDiscount(double overallDiscount) {
         this.overallDiscount = overallDiscount;
-    }
+    }*/
 
     public String getEmail() {
         return email;
@@ -97,9 +96,9 @@ public class UserModel {
     public void addTransactions( Transaction tr) {
         this.transactions.add(tr);
     }
-    public IServiceStrategy getService(){
+    /*public IServiceStrategy getService(){
         return service;
-    }
+    }*/
 
     @Override
     public String toString() {

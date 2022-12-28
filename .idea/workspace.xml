@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="update the code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="add signUp api and add UserView">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Search/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Search/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,17 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d2a57dc1d883fd21fb9951699df71cc7&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.FawrySystemApplication">
+}</component>
+  <component name="RunManager" selected="HTTP Request.generated-requests | #1">
     <configuration name="FawrySystem.FawrySystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FawrySystem.FawrySystem" />
       <module name="CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321" />
@@ -109,9 +115,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
         <item itemvalue="Spring Boot.FawrySystemApplication" />
+        <item itemvalue="HTTP Request.generated-requests | #2" />
         <item itemvalue="Application.FawrySystem.FawrySystem" />
         <item itemvalue="Application.FawrySystem.Main" />
       </list>
@@ -125,6 +131,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670173251565</updated>
+      <workItem from="1672189255821" duration="490000" />
+      <workItem from="1672268238060" duration="3401000" />
     </task>
     <task id="LOCAL-00001" summary="update the code">
       <created>1670262471222</created>
@@ -133,8 +141,25 @@
       <option name="project" value="LOCAL" />
       <updated>1670262471222</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add signUp api and add UserView">
+      <created>1672189019865</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672189019865</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add signUp api and add UserView">
+      <created>1672189040004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672189040004</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -149,6 +174,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the code" />
+    <MESSAGE value="add signUp api and add UserView" />
+    <option name="LAST_COMMIT_MESSAGE" value="add signUp api and add UserView" />
   </component>
 </project>

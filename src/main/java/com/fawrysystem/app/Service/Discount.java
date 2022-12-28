@@ -22,6 +22,14 @@ public class Discount implements IServiceStrategy{
         return name;
     }
 
+    public double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
     @Override
     public void ExecuteService() {
         System.out.println("the cost of the service after discount is : "+getPrice());

@@ -103,7 +103,7 @@ public class FawrySystem {
     public static void main(String[] args) {
 
         List<UserModel> users = new ArrayList<UserModel>();
-        Admin mhmdSamir = new Admin("MohamedSamir@gmail.com", "123456");
+        AdminModel mhmdSamir = new AdminModel("MohamedSamir@gmail.com", "123456");
         Scanner sc = new Scanner(System.in);
         boolean signedIn = false;
         boolean admin = false;
@@ -122,7 +122,8 @@ public class FawrySystem {
                 if (option == 1) {
                     signedIn = false;
                     admin = false;
-                } else if (option == 2) {
+                }
+                /*else if (option == 2) {
                     System.out.println("1 - For Specific Discount For One Service");
                     System.out.println("2 - For Overall Discount For All Services for All users");
                     System.out.println("3 - For Overall Discount For All Services for one user");
@@ -185,7 +186,7 @@ public class FawrySystem {
                         }
                     }
 
-                }
+                }*/
             } else if (signedIn && !admin) {
                 System.out.println("1- Log Out");
                 System.out.println("2- Search");

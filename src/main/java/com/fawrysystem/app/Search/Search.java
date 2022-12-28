@@ -44,26 +44,11 @@ public class Search {
        return serviceHashMap.get(s);
     }
 
-
-    public void setDiscountOverAllServices (double dicount){
-
-        serviceHashMap.put("NGODonation", new Discount(dicount,serviceHashMap.get("NGODonation")));
-        serviceHashMap.put("SchoolDonation", new Discount(dicount,serviceHashMap.get("SchoolDonation")));
-        serviceHashMap.put("CancerHospitalDonation", new Discount(dicount,serviceHashMap.get("CancerHospitalDonation")));
-        serviceHashMap.put("QuarterReceiptLandline", new Discount(dicount,serviceHashMap.get("QuarterReceiptLandline")));
-        serviceHashMap.put("MonthlyReceiptLandline", new Discount(dicount,serviceHashMap.get("MonthlyReceiptLandline")));
-        serviceHashMap.put("OrangeInternet", new Discount(dicount,serviceHashMap.get("OrangeInternet")));
-        serviceHashMap.put("WEInternet", new Discount(dicount,serviceHashMap.get("WEInternet")));
-        serviceHashMap.put("EtisalatInternet", new Discount(dicount,serviceHashMap.get("EtisalatInternet")));
-        serviceHashMap.put("VodafoneInternet", new Discount(dicount,serviceHashMap.get("VodafoneInternet")));
-        serviceHashMap.put("OrangeRechrage", new Discount(dicount,serviceHashMap.get("OrangeRechrage")));
-        serviceHashMap.put("WERechrage",new Discount(dicount,serviceHashMap.get("WERechrage")));
-        serviceHashMap.put("EtisalatRechrage",new Discount(dicount,serviceHashMap.get("EtisalatRechrage")));
-        serviceHashMap.put("VodafoneRechrage", new Discount(dicount,serviceHashMap.get("VodafoneRechrage")));
-
+    public Map<String, IServiceStrategy> getServiceHashMap() {
+        return serviceHashMap;
     }
 
-    public  void putService(String s,IServiceStrategy Service){  serviceHashMap.put(s,Service);}
+    public  void putService(String s, IServiceStrategy Service){  serviceHashMap.put(s,Service);}
     public static Search getInstance(){
         return instance;
     }
