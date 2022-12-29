@@ -22,10 +22,10 @@ public class AdminService {
 
     public void setDiscountForAllServices(double discount){
         Search search=Search.getInstance();
-        Map<String, IServiceStrategy> serviceHashMap = search.getServiceHashMap();
+
         for (Map.Entry<String, IServiceStrategy>
-                set : serviceHashMap.entrySet()) {
-            set.setValue(new Discount(discount,set.getValue()));
+                set : search.getServiceHashMap().entrySet()) {
+            search.getServiceHashMap().replace(set.getKey(),new Discount(discount,set.getValue()) );
         }
     }
 

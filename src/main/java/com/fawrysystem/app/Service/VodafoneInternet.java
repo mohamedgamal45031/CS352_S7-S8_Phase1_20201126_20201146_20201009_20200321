@@ -6,7 +6,9 @@ public class VodafoneInternet implements IServiceStrategy {
     private double price = 100.0;
     private boolean acceptCash = false;
 
-
+    public void setPrice(double price) {
+        this.price = price;
+    }
     public void setAcceptCash(boolean acceptCash) {
         this.acceptCash = acceptCash;
     }

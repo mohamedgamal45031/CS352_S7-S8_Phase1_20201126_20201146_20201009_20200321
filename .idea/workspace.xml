@@ -4,19 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="add signUp api and add UserView">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" afterDir="false" />
+    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="added Admin Controller and Admin Service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Search/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Search/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/CancerHospitalDonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/CancerHospitalDonation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatRechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatRechrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/IServiceStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/IServiceStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/MonthlyReceiptLandline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/MonthlyReceiptLandline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/NGODonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/NGODonation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeRechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeRechrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/QuarterReceiptLandline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/QuarterReceiptLandline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/SchoolDonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/SchoolDonation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneRechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneRechrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WEInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WEInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WERechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WERechrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Search/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Search/Search.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,37 +75,17 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="HTTP Request.generated-requests | #1">
-    <configuration name="FawrySystem.FawrySystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FawrySystem.FawrySystem" />
-      <module name="CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FawrySystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FawrySystem.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FawrySystem.Main" />
-      <module name="CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FawrySystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="HTTP Request.generated-requests | #8">
+    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+    <configuration name="generated-requests | #6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="6" requestIdentifier="#6" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" requestIdentifier="#7" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" requestIdentifier="#8" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="FawrySystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -115,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #8" />
         <item itemvalue="Spring Boot.FawrySystemApplication" />
-        <item itemvalue="HTTP Request.generated-requests | #2" />
-        <item itemvalue="Application.FawrySystem.FawrySystem" />
-        <item itemvalue="Application.FawrySystem.Main" />
+        <item itemvalue="HTTP Request.generated-requests | #7" />
+        <item itemvalue="HTTP Request.generated-requests | #6" />
+        <item itemvalue="HTTP Request.generated-requests | #5" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670173251565</updated>
       <workItem from="1672189255821" duration="490000" />
-      <workItem from="1672268238060" duration="3401000" />
+      <workItem from="1672268238060" duration="5206000" />
     </task>
     <task id="LOCAL-00001" summary="update the code">
       <created>1670262471222</created>
@@ -155,7 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672189040004</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added Admin Controller and Admin Service">
+      <created>1672271766320</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672271766320</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added Admin Controller and Admin Service">
+      <created>1672271779367</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672271779367</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update the code" />
     <MESSAGE value="add signUp api and add UserView" />
-    <option name="LAST_COMMIT_MESSAGE" value="add signUp api and add UserView" />
+    <MESSAGE value="added Admin Controller and Admin Service" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Admin Controller and Admin Service" />
   </component>
 </project>

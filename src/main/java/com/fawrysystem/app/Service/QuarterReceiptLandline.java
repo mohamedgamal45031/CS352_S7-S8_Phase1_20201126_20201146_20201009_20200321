@@ -4,7 +4,9 @@ public class QuarterReceiptLandline implements IServiceStrategy{
     private String name = "QuarterReceiptLandline";
     private boolean acceptCash = false;
 
-
+    public void setPrice(double price) {
+        this.price = price;
+    }
     public void setAcceptCash(boolean acceptCash) {
         this.acceptCash = acceptCash;
     }

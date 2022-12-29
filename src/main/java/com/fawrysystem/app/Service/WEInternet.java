@@ -6,7 +6,9 @@ public class WEInternet implements IServiceStrategy {
     private double price;
     private boolean acceptCash = false;
 
-
+    public void setPrice(double price) {
+        this.price = price;
+    }
     public void setAcceptCash(boolean acceptCash) {
         this.acceptCash = acceptCash;
     }

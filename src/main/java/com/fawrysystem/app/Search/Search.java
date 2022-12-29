@@ -4,9 +4,11 @@ import com.fawrysystem.app.Service.*;
 import com.fawrysystem.app.User.UserModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("search")
 public class Search {
     private Map<String, IServiceStrategy> serviceHashMap;
     public static Search instance = new Search();
@@ -25,9 +27,8 @@ public class Search {
         serviceHashMap.put("WERechrage", new WERechrage());
         serviceHashMap.put("EtisalatRechrage", new EtisalatRechrage());
         serviceHashMap.put("VodafoneRechrage", new VodafoneRechrage());
-
     }
-    @GetMapping(path = "search/all/{searchString}")
+    @GetMapping(path = "all/{searchString}")
     public Map<String, IServiceStrategy>  getService (@PathVariable("searchString") String s){
         Map<String, IServiceStrategy> ans = new HashMap<String, IServiceStrategy>();
         for (Map.Entry<String, IServiceStrategy> pair :
@@ -39,7 +40,7 @@ public class Search {
         return ans;
     }
 
-    @GetMapping(path = "search/{searchString}")
+    @GetMapping(path = "{searchString}")
     public IServiceStrategy getServiceByName(@PathVariable("searchString") String s){
        return serviceHashMap.get(s);
     }

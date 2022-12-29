@@ -6,6 +6,9 @@ public class OrangeInternet implements IServiceStrategy{
     private double price;
     private boolean acceptCash = false;
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public void setAcceptCash(boolean acceptCash) {
         this.acceptCash = acceptCash;
@@ -20,6 +23,9 @@ public class OrangeInternet implements IServiceStrategy{
     public String getName() {
         return name;
     }
+
+
+
     @Override
     public void ExecuteService() {
         System.out.println("OrangeInternet cost is "+getPrice());

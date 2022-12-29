@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import static java.lang.Double.parseDouble;
+
 @RestController
 @RequestMapping("admin")
 public class AdminController {
@@ -25,8 +27,8 @@ public class AdminController {
     }
     @PostMapping("set/discount/all")
 
-    public void setDiscountForAllServices(@RequestBody double discount){
-        adminService.setDiscountForAllServices(discount);
+    public void setDiscountForAllServices(@RequestBody String discount){
+        adminService.setDiscountForAllServices(parseDouble(discount));
     }
 
     //for one user like if an user gets a discount for his first service

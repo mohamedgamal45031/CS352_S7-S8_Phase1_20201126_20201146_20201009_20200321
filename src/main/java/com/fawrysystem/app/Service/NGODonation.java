@@ -5,7 +5,9 @@ public class NGODonation implements IServiceStrategy{
 
     private double price;
     private boolean acceptCash = true;
-
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public void setAcceptCash(boolean acceptCash) {
         this.acceptCash = acceptCash;
