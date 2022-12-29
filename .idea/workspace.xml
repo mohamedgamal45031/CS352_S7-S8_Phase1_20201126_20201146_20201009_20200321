@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="add discount apis and add setPrice function to Service">
+    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="Finish discount and search and admin APIs&#10;Make SearchService and AdminService Singleton for getting the data modified in runtime">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Search/SearchController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Search/SearchService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -139,7 +139,7 @@
       <updated>1670173251565</updated>
       <workItem from="1672189255821" duration="490000" />
       <workItem from="1672268238060" duration="5320000" />
-      <workItem from="1672337635058" duration="8704000" />
+      <workItem from="1672337635058" duration="9266000" />
     </task>
     <task id="LOCAL-00001" summary="update the code">
       <created>1670262471222</created>
@@ -190,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672273577308</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finish discount and search and admin APIs&#10;Make SearchService and AdminService Singleton for getting the data modified in runtime">
+      <created>1672357455735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672357455737</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +219,7 @@
     <MESSAGE value="add signUp api and add UserView" />
     <MESSAGE value="added Admin Controller and Admin Service" />
     <MESSAGE value="add discount apis and add setPrice function to Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add discount apis and add setPrice function to Service" />
+    <MESSAGE value="Finish discount and search and admin APIs&#10;Make SearchService and AdminService Singleton for getting the data modified in runtime" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish discount and search and admin APIs&#10;Make SearchService and AdminService Singleton for getting the data modified in runtime" />
   </component>
 </project>
