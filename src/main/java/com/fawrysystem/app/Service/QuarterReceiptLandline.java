@@ -20,7 +20,14 @@ public class QuarterReceiptLandline implements IServiceStrategy{
         this.price = 100.0;
     }
 
-
+    @Override
+    public String toString() {
+        return "WERechrage{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", acceptCash=" + acceptCash +
+                '}';
+    }
     @Override
     public void ExecuteService() {
         System.out.println("QuarterReceiptLandline cost is "+getPrice());

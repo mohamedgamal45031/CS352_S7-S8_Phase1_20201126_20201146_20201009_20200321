@@ -22,7 +22,14 @@ public class MonthlyReceiptLandline implements IServiceStrategy{
     public MonthlyReceiptLandline() {
         this.price = 100.0;
     }
-
+    @Override
+    public String toString() {
+        return "WERechrage{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", acceptCash=" + acceptCash +
+                '}';
+    }
     @Override
     public void ExecuteService() {
         System.out.println("MonthlyReceiptLandline cost is "+getPrice());

@@ -35,4 +35,12 @@ public class WEInternet implements IServiceStrategy {
     public String getName() {
         return name;
     }
+    @Override
+    public String toString() {
+        return "WERechrage{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", acceptCash=" + acceptCash +
+                '}';
+    }
 }

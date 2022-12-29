@@ -1,23 +1,20 @@
 package com.fawrysystem.app.User;
 
-import com.fawrysystem.app.Search.Search;
-import com.fawrysystem.app.Service.IServiceStrategy;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fawrysystem.app.Search.SearchService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("api/user")
 public class UserController {
 
-    private Search search ;
+    private SearchService search ;
     private UserServices userServices;
 
     public UserController(UserServices userServices) {
         this.userServices = userServices;
-        this.search = Search.getInstance();
+        this.search = SearchService.getInstance();
     }
     @GetMapping("all")
     public List<UserModel>getAllUsers(){

@@ -19,7 +19,14 @@ public class VodafoneInternet implements IServiceStrategy {
     public VodafoneInternet() {
 
     }
-
+    @Override
+    public String toString() {
+        return "WERechrage{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", acceptCash=" + acceptCash +
+                '}';
+    }
     @Override
     public void ExecuteService() {
         System.out.println("Vodafone Internet cost is " + getPrice());

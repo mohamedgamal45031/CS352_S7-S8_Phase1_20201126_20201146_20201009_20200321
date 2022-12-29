@@ -16,8 +16,10 @@ public class Discount implements IServiceStrategy{
     public Discount(double discount, IServiceStrategy discountedservice) {
         this.discount=discount;
         this.discountedservice=discountedservice;
-        this.discountedservice.setPrice(discountedservice.getPrice()*discount/100);
-        this.price = discountedservice.getPrice()*discount/100;
+        //to modify the whole service price
+        discountedservice.setPrice(discountedservice.getPrice()*((discount+100)/100));
+        this.discountedservice.setPrice(discountedservice.getPrice()*((discount+100)/100));
+        this.price = discountedservice.getPrice()*((discount+100)/100);
         this.name= discountedservice.getName();
         this.acceptCash = discountedservice.isAcceptCash();
     }
@@ -43,6 +45,17 @@ public class Discount implements IServiceStrategy{
 
     @Override
     public double getPrice() {
-        return this.discountedservice.getPrice()-(this.discountedservice.getPrice()*this.discount);
+        return this.price;
+    }
+
+    @Override
+    public String toString() {
+        return "Discount{" +
+                "price=" + price +
+                ", discount=" + discount +
+                ", discountedservice=" + discountedservice +
+                ", name='" + name + '\'' +
+                ", acceptCash=" + acceptCash +
+                '}';
     }
 }

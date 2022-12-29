@@ -24,7 +24,14 @@ public class OrangeInternet implements IServiceStrategy{
         return name;
     }
 
-
+    @Override
+    public String toString() {
+        return "WERechrage{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", acceptCash=" + acceptCash +
+                '}';
+    }
 
     @Override
     public void ExecuteService() {

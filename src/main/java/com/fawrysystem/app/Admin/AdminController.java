@@ -1,10 +1,5 @@
 package com.fawrysystem.app.Admin;
 
-import java.util.Map;
-
-import com.fawrysystem.app.Search.Search;
-import com.fawrysystem.app.Service.Discount;
-import com.fawrysystem.app.Service.IServiceStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,24 +11,25 @@ import static java.lang.Double.parseDouble;
 @RestController
 @RequestMapping("admin")
 public class AdminController {
-    private AdminService adminService;
+
     @Autowired
-    public AdminController(AdminService adminService) {
-        this.adminService = adminService;
+    public AdminController() {
+
     }
     @PostMapping("set/discount")
-    public void setDiscount(@RequestBody Discount discount){
-        adminService.setDiscount(discount.getDiscount(), discount.getName());
+    public void setDiscount(@RequestBody String discount){
+        String[] arrOfStr = discount.split(",");
+        AdminService.getInstance().setDiscount(parseDouble(arrOfStr[1]), arrOfStr[0]);
     }
     @PostMapping("set/discount/all")
-
     public void setDiscountForAllServices(@RequestBody String discount){
-        adminService.setDiscountForAllServices(parseDouble(discount));
+        AdminService.getInstance().setDiscountForAllServices(parseDouble(discount));
+
     }
 
     //for one user like if an user gets a discount for his first service
-   /* public void setDiscountForOneUser(double discount,UserModel user){
-        user.setOverAllDicount(discount);
+    /* public void setDiscountForOneUser(double discount,UserModel user){
+            user.setOverAllDicount(discount);
     }*/
 
 

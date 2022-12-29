@@ -1,10 +1,6 @@
 package com.fawrysystem.app.User;
 
-import com.fawrysystem.app.Search.Search;
-import org.apache.catalina.User;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.UnsupportedMediaTypeStatusException;
 
 import java.util.*;
 @Service

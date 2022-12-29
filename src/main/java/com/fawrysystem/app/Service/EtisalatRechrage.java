@@ -23,7 +23,14 @@ public class EtisalatRechrage implements IServiceStrategy{
     public EtisalatRechrage() {
         this.price = 100.0;
     }
-
+    @Override
+    public String toString() {
+        return "WERechrage{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", acceptCash=" + acceptCash +
+                '}';
+    }
     @Override
     public void ExecuteService() {
         System.out.println("EtisalatRechrage cost is "+getPrice());
