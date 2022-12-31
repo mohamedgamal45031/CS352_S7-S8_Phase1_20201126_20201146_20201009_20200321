@@ -7,7 +7,7 @@ public class Refund {
     private String description;
     private double amount;
     private boolean isRefunded = false;
-
+    private boolean isAccepted;
     private UserModel user;
 
     public boolean isRefunded() {
@@ -42,5 +42,28 @@ public class Refund {
 
     public double getAmount() {
         return amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Refund{" +
+                "description='" + description + '\'' +
+                ", amount=" + amount +
+                ", isRefunded=" + isRefunded +
+                ", isAccepted=" + isAccepted +
+                ", user=" + user +
+                '}';
+    }
+
+    public boolean isAccepted() {
+        return isAccepted;
+    }
+
+    public void setAccepted(boolean accepted) {
+        isAccepted = accepted;
+    }
+
+    public void setUser(UserModel user) {
+        this.user = user;
     }
 }

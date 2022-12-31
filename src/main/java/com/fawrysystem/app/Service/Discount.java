@@ -17,9 +17,10 @@ public class Discount implements IServiceStrategy{
         this.discount=discount;
         this.discountedservice=discountedservice;
         //to modify the whole service price
-        discountedservice.setPrice(discountedservice.getPrice()*((discount+100)/100));
-        this.discountedservice.setPrice(discountedservice.getPrice()*((discount+100)/100));
-        this.price = discountedservice.getPrice()*((discount+100)/100);
+
+//        this.discountedservice.setPrice(discountedservice.getPrice()-((discount/100)*discountedservice.getPrice()));
+        this.price = discountedservice.getPrice()-((discount/100)*discountedservice.getPrice());
+
         this.name= discountedservice.getName();
         this.acceptCash = discountedservice.isAcceptCash();
     }

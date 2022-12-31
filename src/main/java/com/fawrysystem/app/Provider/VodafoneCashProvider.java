@@ -3,9 +3,7 @@ package com.fawrysystem.app.Provider;
 import java.util.Scanner;
 
 public class VodafoneCashProvider implements ServiceProvider {
-
     private String name  = "Vodafone Cash";
-
     @Override
     public void handler() {
         showPaymentForm();
@@ -21,7 +19,6 @@ public class VodafoneCashProvider implements ServiceProvider {
         System.out.println("Enter Amount: ");
         float amount=sc.nextInt();
         System.out.println("### --------------- --------------------------- --------------- ### ");
-
     }
     @Override
     public String getName(){

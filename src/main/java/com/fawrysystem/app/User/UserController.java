@@ -1,9 +1,13 @@
 package com.fawrysystem.app.User;
 
+import com.fawrysystem.app.Admin.AdminService;
+import com.fawrysystem.app.Admin.Refund;
 import com.fawrysystem.app.Search.SearchService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import static java.lang.Double.parseDouble;
 
 @RestController
 @RequestMapping("api/user")
@@ -20,24 +24,15 @@ public class UserController {
     public List<UserModel>getAllUsers(){
         return userServices.getUsers();
     }
-
     @GetMapping(path = "check/{username}")
-    public String checkIfExists(@PathVariable("username") String username){
+    public UserModel checkIfExists(@PathVariable("username") String username){
         return userServices.getUserWithUsername(username) != null ? userServices.getUserWithUsername(username):null;
     }
-    @GetMapping(path = "check/{email}")
+    @GetMapping(path = "check/email/{email}")
     public UserModel checkIfExistsWithEmail(@PathVariable("email") String email){
         return userServices.getUserWithEmail(email) != null ? userServices.getUserWithEmail(email) : null;
     }
-    /*
-    * {
-    *   "name":"value"
-    *   "say":"HI",
-    *   "to":"Mom"
-    * }
-    *  */
     @GetMapping("refundable/{username}")
-   // @GetMapping(path = "transaction/{id}")
     public List<Transaction> refundableRequest(@PathVariable("username") String name){
         return userServices.getRefundableRequests(name);
     }
@@ -52,9 +47,32 @@ public class UserController {
             return false;
         }
     }
-//    public void PayForService() {
-//        service.ExecuteService();
-//    }
+    @PostMapping("signIn")
+    public boolean signIn(@RequestBody UserModel userModel){
+        //user not found so can be sign up
+        return userServices.signIn(userModel);
+    }
+    @PostMapping("transfer")
+    public void transferMoneyToWallet(@RequestBody String userAmount){
+        //gemy,200.0
+        String[] arrOfStr = userAmount.split(",");
+        userServices.transferMoneyToWallet(arrOfStr[0],parseDouble(arrOfStr[1]));
+    }
+    @PostMapping("refund/make")
+    public boolean makeRefundRequest(@RequestBody String userTransactionName){
+        //gemy,OrangeRechrage
+        String[] arrOfStr = userTransactionName.split(",");
+        return userServices.makeRefundRequest(arrOfStr[0],arrOfStr[1]);
+    }
+    @GetMapping(path ="wallet/{userName}")
+    public double getWalletBalance(@PathVariable String userName){
+        return userServices.getWalletBalance(userName);
+    }
+
+    /*@PostMapping("payService")
+    public void PayForService(@RequestBody UserModel user) {
+        service.ExecuteService();
+    }*/
 
 }
 

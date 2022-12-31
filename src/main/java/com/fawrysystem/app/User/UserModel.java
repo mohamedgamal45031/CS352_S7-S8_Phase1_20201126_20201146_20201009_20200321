@@ -51,7 +51,10 @@ public class UserModel {
         this.password = password;
     }
 
-   /* public double getOverallDiscount() {
+    public UserModel(String email) {
+        this.email = email;
+    }
+    /* public double getOverallDiscount() {
         return overallDiscount;
     }*/
 

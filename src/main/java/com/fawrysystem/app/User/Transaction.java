@@ -4,6 +4,7 @@ public class Transaction {
     private String transactionName;
     private double amount;
     private boolean refundRequested = false;
+    private String transactionType;
     public void setTransactionName(String transactionName) {
         this.transactionName = transactionName;
     }
@@ -38,5 +39,20 @@ public class Transaction {
         this.transactionName = transactionName;
         this.amount = amount;
         this.refundRequested = refundRequested;
+    }
+
+    public Transaction(String transactionName, double amount, boolean refundRequested, String transactionType) {
+        this.transactionName = transactionName;
+        this.amount = amount;
+        this.refundRequested = refundRequested;
+        this.transactionType = transactionType;
+    }
+
+    public String getTransactionType() {
+        return transactionType;
+    }
+
+    public void setTransactionType(String transactionType) {
+        this.transactionType = transactionType;
     }
 }

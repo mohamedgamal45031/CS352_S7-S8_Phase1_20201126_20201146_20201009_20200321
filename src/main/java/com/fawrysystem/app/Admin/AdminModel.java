@@ -1,16 +1,23 @@
 package com.fawrysystem.app.Admin;
 
 import java.util.ArrayList;
-import java.util.List;
-
 public class AdminModel {
     private String email;
     private String password;
+    private ArrayList<Refund> refunds = new ArrayList<Refund>();
 
-    private List<Refund> refunds = new ArrayList<Refund>();
+    public AdminModel() {
+    }
+
     public AdminModel(String email, String password) {
         this.email = email;
         this.password = password;
+    }
+
+    public AdminModel(String email, String password, ArrayList<Refund> refunds) {
+        this.email = email;
+        this.password = password;
+        this.refunds = refunds;
     }
 
     public String getEmail() {
@@ -31,11 +38,20 @@ public class AdminModel {
         refunds.add(r);
     }
 
-    public List<Refund> getRefunds() {
+    public ArrayList<Refund> getRefunds() {
         return refunds;
     }
 
-    public void setRefunds(List<Refund> refunds) {
+    public void setRefunds(ArrayList<Refund> refunds) {
         this.refunds = refunds;
+    }
+
+    @Override
+    public String toString() {
+        return "AdminModel{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", refunds=" + refunds +
+                '}';
     }
 }
