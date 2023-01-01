@@ -1,12 +1,9 @@
 package com.fawrysystem.app.User;
 
-import com.fawrysystem.app.Admin.AdminService;
-import com.fawrysystem.app.Admin.Refund;
 import com.fawrysystem.app.Search.SearchService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
+import java.util.*;
 import static java.lang.Double.parseDouble;
 
 @RestController
@@ -70,11 +67,11 @@ public class UserController {
 
     @PostMapping("payService")
     public boolean PayForService(@RequestBody String payment) {
-        //gemy,vodafoneCash,EtisalatRechrage
+        //gemy,VodafoneCash,EtisalatRecharge
         String[] arrOfStr = payment.split(",");
         return userServices.payForService(arrOfStr[0],arrOfStr[1],arrOfStr[2]);
-//        service.ExecuteService();
     }
+
 
 }
 

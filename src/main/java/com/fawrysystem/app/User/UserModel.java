@@ -1,17 +1,12 @@
 package com.fawrysystem.app.User;
 
 
-import com.fawrysystem.app.Service.IServiceStrategy;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Getter
 @Setter
@@ -24,10 +19,12 @@ public class UserModel {
     private String creditCardNumber;
     private double walletBalance = 0.0;
     private ArrayList<Transaction> transactions = new ArrayList<Transaction>();
-    public void addTransactions( Transaction tr) {
-        this.transactions.add(tr);
+    public void addTransactions(Transaction tr) {
+        transactions.add(tr);
     }
-
+    public ArrayList<Transaction> getTransactions(){
+        return transactions;
+    }
     public UserModel(String userName, String email, String password, ArrayList<Transaction> transactions) {
         this.userName = userName;
         this.email = email;
@@ -46,6 +43,8 @@ public class UserModel {
         return "UserModel{" +
                 "userName='" + userName + '\'' +
                 ", email='" + email + '\'' +
+                ", transactions=" + transactions +
                 '}';
     }
+
 }

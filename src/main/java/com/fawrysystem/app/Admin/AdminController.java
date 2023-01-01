@@ -1,6 +1,9 @@
 package com.fawrysystem.app.Admin;
 
+import com.fawrysystem.app.Search.SearchService;
 import com.fawrysystem.app.User.Transaction;
+import com.fawrysystem.app.User.UserModel;
+import com.fawrysystem.app.User.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,10 +18,11 @@ import static java.lang.Integer.parseInt;
 @RestController
 @RequestMapping("admin")
 public class AdminController {
+    private AdminService adminService;
 
     @Autowired
-    public AdminController() {
-
+    public AdminController(AdminService adminService) {
+        this.adminService = adminService;
     }
     //specific
     @PostMapping("set/discount")
@@ -39,15 +43,15 @@ public class AdminController {
     public List<Refund> showRefundRequests(){
         return AdminService.getInstance().showRefundRequests();
     }
-    @GetMapping("show/transactions")
-    public HashMap<String, ArrayList<Transaction>> showTransactions(){
-        return AdminService.getInstance().showTransactions();
-    }
+
     @PostMapping("response")
     public void responseRefund(@RequestBody String response){
         //2,accept
         String[] arrOfStr = response.split(",");
         AdminService.getInstance().responseRefund(parseInt(arrOfStr[0]),arrOfStr[1]);
     }
-
+    @GetMapping("show/transactions")
+    public HashMap<String, ArrayList<Transaction>> showTransactions(){
+        return adminService.showTransactions();
+    }
 }

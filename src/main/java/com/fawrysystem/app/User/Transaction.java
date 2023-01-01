@@ -26,5 +26,13 @@ public class Transaction {
         this.refundRequested = refundRequested;
     }
 
-
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionName='" + transactionName + '\'' +
+                ", amount=" + amount +
+                ", refundRequested=" + refundRequested +
+                ", transactionType='" + transactionType + '\'' +
+                '}';
+    }
 }

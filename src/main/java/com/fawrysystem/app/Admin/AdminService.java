@@ -1,27 +1,24 @@
 package com.fawrysystem.app.Admin;
 
-import ch.qos.logback.core.joran.sanity.Pair;
-import com.fawrysystem.app.Provider.CreditCardProvider;
-import com.fawrysystem.app.Provider.ServiceProvider;
-import com.fawrysystem.app.Provider.VodafoneCashProvider;
+import com.fawrysystem.app.Provider.*;
 import com.fawrysystem.app.Service.*;
-import com.fawrysystem.app.User.Transaction;
-import com.fawrysystem.app.User.UserModel;
-import com.fawrysystem.app.User.UserServices;
+import com.fawrysystem.app.User.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.w3c.dom.stylesheets.LinkStyle;
-
-import javax.sound.midi.Track;
 import java.util.*;
 
 @Service
 public class AdminService {
+    private UserServices userServices;
     private AdminModel admin = new AdminModel("mohamedSamir@gmail.com","123456");
-
+    @Autowired
+    public AdminService(UserServices userServices) {
+        admin.addRefund(new Refund("عمر",20.0,new UserModel("gemy", "gemy@gmail.com", "123456")));
+        this.userServices = userServices;
+    }
     public AdminService() {
         admin.addRefund(new Refund("عمر",20.0,new UserModel("gemy", "gemy@gmail.com", "123456")));
     }
-
     public static AdminService instance = new AdminService();
     //select *
     private Map<String, IServiceStrategy> serviceHashMap = new HashMap<String, IServiceStrategy>(){{
@@ -91,22 +88,9 @@ public class AdminService {
         this.admin = admin;
     }
 
-    public static void setInstance(AdminService instance) {
-        AdminService.instance = instance;
-    }
-    public HashMap<String,ArrayList<Transaction>> showTransactions(){
-        HashMap<String,ArrayList<Transaction>> map = new HashMap<String,ArrayList<Transaction>>();
-        /*
-        * gemy []
-        * omar []
-        * */
-        for (int i = 0; i < UserServices.getInstance().getUsers().size(); i++) {
-            System.out.println(UserServices.getInstance().getUsers().get(i));
-            map.put(UserServices.getInstance().getUsers().get(i).getUserName(),
-                    UserServices.getInstance().getUsers().get(i).getTransactions());
-        }
-        return map;
-    }
+
+
+
     public void responseRefund(int index,String response){
         if(Objects.equals(response, "accept")){
             if(admin.getRefunds().get(index)!=null){
@@ -126,5 +110,18 @@ public class AdminService {
 
     public void setServiceProviderMap(Map<String, ServiceProvider> serviceProviderMap) {
         this.serviceProviderMap = serviceProviderMap;
+    }
+
+    public HashMap<String,ArrayList<Transaction>> showTransactions(){
+        HashMap<String,ArrayList<Transaction>> map = new HashMap<String,ArrayList<Transaction>>();
+
+        /* gemy []
+         * omar []
+         * */
+        for (int i = 0; i < userServices.getUsers().size(); i++) {
+            map.put(userServices.getUsers().get(i).getUserName(),
+                    userServices.getUsers().get(i).getTransactions());
+        }
+        return map;
     }
 }

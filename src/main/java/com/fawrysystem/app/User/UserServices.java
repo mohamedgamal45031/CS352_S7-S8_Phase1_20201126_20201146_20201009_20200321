@@ -1,32 +1,21 @@
 package com.fawrysystem.app.User;
 
-import com.fawrysystem.app.Admin.AdminService;
-import com.fawrysystem.app.Admin.Refund;
-import com.fawrysystem.app.Provider.ServiceProvider;
+import com.fawrysystem.app.Admin.*;
+import com.fawrysystem.app.Provider.*;
 import com.fawrysystem.app.Service.*;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
-
-import javax.swing.text.TabExpander;
-import java.rmi.server.ExportException;
-import java.security.Provider;
 import java.util.*;
 @Service
-public class UserServices {
+public  class UserServices {
     public static UserServices instance = new UserServices();
-    private ArrayList<UserModel> users = new ArrayList<UserModel>(
-            List.of(
-                    new UserModel("gemy", "gemy@gmail.com", "123456", new ArrayList<>(
-                            List.of(
-                                    new Transaction("OrangeRechrage",40),
-                                    new Transaction("gamy",50,true))
-                    )),
-                    new UserModel("omar", "omar@gmail.com", "123456"),
-                    new UserModel("adool", "adool@gmail.com", "123456"),
-                    new UserModel("zizo", "zizo@gmail.com", "123456")
-            ));
+    private ArrayList<UserModel> users = new ArrayList<UserModel>();
 
+    public UserServices() {
+        users.add(new UserModel("gemy", "gemy@gmail.com", "123456"));
+        users.add(new UserModel("omar", "omar@gmail.com", "123456"));
+        users.add(new UserModel("adool", "adool@gmail.com", "123456"));
+        users.add(new UserModel("zizo", "zizo@gmail.com", "123456"));
+    }
 
     public ArrayList<UserModel>getUsers(){
         return users;
@@ -132,13 +121,13 @@ public class UserServices {
         Transaction t = new Transaction(service.getName(),service.getPrice(),false,"Payment Transaction");
         if(!Objects.equals(provider, "wallet")){
             service.ExecuteService(p);
-            user.addTransactions(t);
+            getUserWithUsername(userName).addTransactions(t);
             return true;
         }
         else{
             if(user.getWalletBalance()>=service.getPrice()){
                 service.ExecuteService(user,p);
-                user.addTransactions(t);
+                getUserWithUsername(userName).addTransactions(t);
                 System.out.println("Wallet Paying.....");
                 return true;
             }
@@ -146,4 +135,5 @@ public class UserServices {
             return false;
         }
     }
+
 }

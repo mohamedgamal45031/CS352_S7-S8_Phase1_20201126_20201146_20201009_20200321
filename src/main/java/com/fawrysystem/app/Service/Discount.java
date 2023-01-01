@@ -6,7 +6,7 @@ import com.fawrysystem.app.User.UserModel;
 public class Discount implements IServiceStrategy{
     private double price;
     private double discount;
-    private IServiceStrategy discountedservice;
+    private IServiceStrategy discountedService;
     private String name;
     private boolean acceptCash = false;
     public void setAcceptCash(boolean acceptCash) {
@@ -16,16 +16,12 @@ public class Discount implements IServiceStrategy{
     public boolean isAcceptCash() {
         return acceptCash;
     }
-    public Discount(double discount, IServiceStrategy discountedservice) {
+    public Discount(double discount, IServiceStrategy discountedService) {
         this.discount=discount;
-        this.discountedservice=discountedservice;
-        //to modify the whole service price
-
-//        this.discountedservice.setPrice(discountedservice.getPrice()-((discount/100)*discountedservice.getPrice()));
-        this.price = discountedservice.getPrice()-((discount/100)*discountedservice.getPrice());
-
-        this.name= discountedservice.getName();
-        this.acceptCash = discountedservice.isAcceptCash();
+        this.discountedService=discountedService;
+        this.price = discountedService.getPrice()-((discount/100)*discountedService.getPrice());
+        this.name= discountedService.getName();
+        this.acceptCash = discountedService.isAcceptCash();
     }
     public String getName(){
         return name;
@@ -63,7 +59,7 @@ public class Discount implements IServiceStrategy{
         return "Discount{" +
                 "price=" + price +
                 ", discount=" + discount +
-                ", discountedservice=" + discountedservice +
+                ", discountedservice=" + discountedService +
                 ", name='" + name + '\'' +
                 ", acceptCash=" + acceptCash +
                 '}';
