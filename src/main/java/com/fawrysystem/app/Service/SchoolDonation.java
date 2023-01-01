@@ -49,4 +49,8 @@ public class SchoolDonation implements IServiceStrategy{
     public double getPrice() {
         return price;
     }
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 }

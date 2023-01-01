@@ -22,7 +22,7 @@ public class AdminService {
     public static AdminService instance = new AdminService();
     //select *
     private Map<String, IServiceStrategy> serviceHashMap = new HashMap<String, IServiceStrategy>(){{
-        put("NGODonation", new NGODonation());
+        put("NGODonation", new Discount(20.0,new NGODonation()));
         put("SchoolDonation", new SchoolDonation());
         put("CancerHospitalDonation", new CancerHospitalDonation());
         put("QuarterReceiptLandline", new QuarterReceiptLandline());
@@ -93,14 +93,14 @@ public class AdminService {
 
     public void responseRefund(int index,String response){
         if(Objects.equals(response, "accept")){
-            if(admin.getRefunds().get(index)!=null){
-                Refund r =admin.getRefunds().get(index);
+            if(admin.getRefunds().get(index-1)!=null){
+                Refund r =admin.getRefunds().get(index-1);
                 r.getUser().setWalletBalance(r.getUser().getWalletBalance()+r.getAmount());
                 r.setAccepted(true);
             }
         }
         else{
-            admin.getRefunds().get(index).setAccepted(false);
+            admin.getRefunds().get(index-1).setAccepted(false);
         }
     }
 

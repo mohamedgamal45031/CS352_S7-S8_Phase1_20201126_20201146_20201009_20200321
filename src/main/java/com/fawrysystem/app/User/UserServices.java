@@ -135,5 +135,14 @@ public  class UserServices {
             return false;
         }
     }
-
+    public List<String> getDiscountedServices (){
+        ArrayList<String> list =new ArrayList<>();
+        for (Map.Entry<String, IServiceStrategy>
+                set : AdminService.getInstance().getServiceHashMap().entrySet()) {
+            if(set.getValue().getDiscount()!=0.0){
+                list.add(set.getKey());
+            }
+        }
+        return list;
+    }
 }

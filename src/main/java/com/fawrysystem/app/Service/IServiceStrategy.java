@@ -13,4 +13,6 @@ public interface IServiceStrategy {
     public void setAcceptCash(boolean acceptCash);
 
     public boolean isAcceptCash() ;
+    public double getDiscount() ;
+
 }

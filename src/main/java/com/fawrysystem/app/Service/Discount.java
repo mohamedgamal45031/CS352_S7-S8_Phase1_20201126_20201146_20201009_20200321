@@ -5,7 +5,7 @@ import com.fawrysystem.app.User.UserModel;
 
 public class Discount implements IServiceStrategy{
     private double price;
-    private double discount;
+    private double discount = 0.0;
     private IServiceStrategy discountedService;
     private String name;
     private boolean acceptCash = false;

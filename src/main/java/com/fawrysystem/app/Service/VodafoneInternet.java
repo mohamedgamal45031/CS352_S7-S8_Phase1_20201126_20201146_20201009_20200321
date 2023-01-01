@@ -49,4 +49,8 @@ public class VodafoneInternet implements IServiceStrategy {
     public String getName() {
         return name;
     }
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 }

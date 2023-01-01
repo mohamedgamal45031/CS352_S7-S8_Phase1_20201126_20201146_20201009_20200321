@@ -52,4 +52,8 @@ public class WEInternet implements IServiceStrategy {
                 ", acceptCash=" + acceptCash +
                 '}';
     }
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 }

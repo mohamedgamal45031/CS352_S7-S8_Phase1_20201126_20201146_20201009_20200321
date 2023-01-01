@@ -49,4 +49,8 @@ public class VodafoneRechrage implements IServiceStrategy {
                 ", acceptCash=" + acceptCash +
                 '}';
     }
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 }

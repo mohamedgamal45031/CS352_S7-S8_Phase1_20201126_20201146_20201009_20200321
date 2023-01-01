@@ -27,6 +27,7 @@ public class AdminController {
     //specific
     @PostMapping("set/discount")
     public void setDiscount(@RequestBody String discount){
+        //WEInternet,20.0
         String[] arrOfStr = discount.split(",");
         AdminService.getInstance().setDiscount(parseDouble(arrOfStr[1]), arrOfStr[0]);
     }

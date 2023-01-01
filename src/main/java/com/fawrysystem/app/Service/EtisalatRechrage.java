@@ -18,6 +18,12 @@ public class EtisalatRechrage implements IServiceStrategy{
     public boolean isAcceptCash() {
         return acceptCash;
     }
+
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
+
     private String name = "EtisalatRechrage";
 
     public String getName() {
@@ -49,4 +55,5 @@ public class EtisalatRechrage implements IServiceStrategy{
     public double getPrice() {
         return price;
     }
+
 }

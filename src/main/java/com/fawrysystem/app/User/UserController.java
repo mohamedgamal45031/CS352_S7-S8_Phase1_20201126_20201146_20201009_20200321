@@ -1,6 +1,7 @@
 package com.fawrysystem.app.User;
 
 import com.fawrysystem.app.Search.SearchService;
+import com.fawrysystem.app.Service.IServiceStrategy;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -71,7 +72,10 @@ public class UserController {
         String[] arrOfStr = payment.split(",");
         return userServices.payForService(arrOfStr[0],arrOfStr[1],arrOfStr[2]);
     }
-
+    @GetMapping("get/discountedServices")
+    public List<String> getDiscountedServices (){
+        return userServices.getDiscountedServices ();
+    }
 
 }
 

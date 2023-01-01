@@ -43,7 +43,10 @@ public class CancerHospitalDonation implements IServiceStrategy{
         provider.handler();
 
     }
-
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 
     @Override
     public double getPrice() {
