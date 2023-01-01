@@ -3,6 +3,7 @@
 ## How to build the project :
 ### 1-spring version 3.0.1
 ### 2-java version 17
+### 3-import as a maven project
 ## Plugins:
 #### 1-Spring web
 #### 2-Lombok
