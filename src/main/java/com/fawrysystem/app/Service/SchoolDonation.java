@@ -1,5 +1,8 @@
 package com.fawrysystem.app.Service;
 
+import com.fawrysystem.app.Provider.ServiceProvider;
+import com.fawrysystem.app.User.UserModel;
+
 public class SchoolDonation implements IServiceStrategy{
     private String name = "SchoolDonation";
 
@@ -29,8 +32,15 @@ public class SchoolDonation implements IServiceStrategy{
                 '}';
     }
     @Override
-    public void ExecuteService() {
+    public void ExecuteService(UserModel user, ServiceProvider provider) {
+        user.setWalletBalance(user.getWalletBalance()-getPrice());
+
         System.out.println("SchoolDonation cost is "+getPrice());
+    }
+    public void ExecuteService(ServiceProvider provider){
+        System.out.println("SchoolDonation cost is "+getPrice());
+        provider.handler();
+
     }
     public String getName() {
         return name;

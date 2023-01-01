@@ -12,7 +12,6 @@ import static java.lang.Double.parseDouble;
 @RestController
 @RequestMapping("api/user")
 public class UserController {
-
     private SearchService search ;
     private UserServices userServices;
 
@@ -69,10 +68,13 @@ public class UserController {
         return userServices.getWalletBalance(userName);
     }
 
-    /*@PostMapping("payService")
-    public void PayForService(@RequestBody UserModel user) {
-        service.ExecuteService();
-    }*/
+    @PostMapping("payService")
+    public boolean PayForService(@RequestBody String payment) {
+        //gemy,vodafoneCash,EtisalatRechrage
+        String[] arrOfStr = payment.split(",");
+        return userServices.payForService(arrOfStr[0],arrOfStr[1],arrOfStr[2]);
+//        service.ExecuteService();
+    }
 
 }
 

@@ -1,5 +1,8 @@
 package com.fawrysystem.app.Service;
 
+import com.fawrysystem.app.Provider.ServiceProvider;
+import com.fawrysystem.app.User.UserModel;
+
 public class QuarterReceiptLandline implements IServiceStrategy{
     private String name = "QuarterReceiptLandline";
     private boolean acceptCash = false;
@@ -28,8 +31,15 @@ public class QuarterReceiptLandline implements IServiceStrategy{
                 ", acceptCash=" + acceptCash +
                 '}';
     }
+    public void ExecuteService(ServiceProvider provider){
+        System.out.println("QuarterReceiptLandline cost is "+getPrice());
+        provider.handler();
+
+    }
     @Override
-    public void ExecuteService() {
+    public void ExecuteService(UserModel user, ServiceProvider provider) {
+        user.setWalletBalance(user.getWalletBalance()-getPrice());
+
         System.out.println("QuarterReceiptLandline cost is "+getPrice());
     }
     public String getName() {

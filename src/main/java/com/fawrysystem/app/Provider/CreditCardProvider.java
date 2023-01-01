@@ -1,24 +1,22 @@
 package com.fawrysystem.app.Provider;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CreditCardProvider implements ServiceProvider {
     private String name  = "Credit Card";
+    private ArrayList<Component> providerForm = new ArrayList<Component>();
+
     @Override
     public void handler() {
         showPaymentForm();
         System.out.println("Credit Card Paying.....");
     }
-//dhfdkjhdglkdjg
     @Override
     public void showPaymentForm() {
-        System.out.println("### --------------- Credit Card Provider form --------------- ### ");
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Credit Card number: ");
-        int cardNum=sc.nextInt();
-        System.out.println("Enter Amount: ");
-        float amount=sc.nextInt();
-        System.out.println("### --------------- ------------------------- --------------- ### ");
+        for (int i = 0; i < providerForm.size(); i++) {
+            System.out.println("Enter "+providerForm.get(i).label);
+        }
     }
 
     @Override

@@ -1,6 +1,9 @@
 package com.fawrysystem.app.Admin;
 
 import ch.qos.logback.core.joran.sanity.Pair;
+import com.fawrysystem.app.Provider.CreditCardProvider;
+import com.fawrysystem.app.Provider.ServiceProvider;
+import com.fawrysystem.app.Provider.VodafoneCashProvider;
 import com.fawrysystem.app.Service.*;
 import com.fawrysystem.app.User.Transaction;
 import com.fawrysystem.app.User.UserModel;
@@ -31,10 +34,14 @@ public class AdminService {
         put("WEInternet", new WEInternet());
         put("EtisalatInternet", new EtisalatInternet());
         put("VodafoneInternet", new VodafoneInternet());
-        put("OrangeRechrage", new OrangeRechrage());
-        put("WERechrage", new WERechrage());
-        put("EtisalatRechrage", new EtisalatRechrage());
-        put("VodafoneRechrage", new VodafoneRechrage());
+        put("OrangeRecharge", new OrangeRechrage());
+        put("WERecharge", new WERechrage());
+        put("EtisalatRecharge", new EtisalatRechrage());
+        put("VodafoneRecharge", new VodafoneRechrage());
+    }};
+    private Map<String, ServiceProvider> serviceProviderMap = new HashMap<String, ServiceProvider>(){{
+        put("CreditCard", new CreditCardProvider());
+        put("VodafoneCash", new VodafoneCashProvider());
     }};
     public void setDiscount(double amount, String name){
         serviceHashMap.replace(name,new Discount(amount,serviceHashMap.get(name)));
@@ -46,11 +53,6 @@ public class AdminService {
                 set : serviceHashMap.entrySet()) {
             serviceHashMap.replace(set.getKey(),new Discount(discount,set.getValue()) );
         }
-        for (Map.Entry<String, IServiceStrategy>
-                set : serviceHashMap.entrySet()) {
-            System.out.println(set.getKey()+set.getValue());
-        }
-
     }
 
     public Map<String, IServiceStrategy> getServiceHashMap() {
@@ -92,26 +94,37 @@ public class AdminService {
     public static void setInstance(AdminService instance) {
         AdminService.instance = instance;
     }
-    public HashMap showTransactions(){
-        HashMap<String,List<Transaction>> map = new HashMap<>();
+    public HashMap<String,ArrayList<Transaction>> showTransactions(){
+        HashMap<String,ArrayList<Transaction>> map = new HashMap<String,ArrayList<Transaction>>();
         /*
         * gemy []
         * omar []
         * */
         for (int i = 0; i < UserServices.getInstance().getUsers().size(); i++) {
-            map.put(UserServices.getInstance().getUsers().get(i).getUserName(),UserServices.getInstance().getUsers().get(i).getTransactions());
+            System.out.println(UserServices.getInstance().getUsers().get(i));
+            map.put(UserServices.getInstance().getUsers().get(i).getUserName(),
+                    UserServices.getInstance().getUsers().get(i).getTransactions());
         }
         return map;
     }
     public void responseRefund(int index,String response){
         if(Objects.equals(response, "accept")){
             if(admin.getRefunds().get(index)!=null){
-                admin.getRefunds().get(index).setAccepted(true);
+                Refund r =admin.getRefunds().get(index);
+                r.getUser().setWalletBalance(r.getUser().getWalletBalance()+r.getAmount());
+                r.setAccepted(true);
             }
         }
         else{
             admin.getRefunds().get(index).setAccepted(false);
         }
     }
-    
+
+    public Map<String, ServiceProvider> getServiceProviderMap() {
+        return serviceProviderMap;
+    }
+
+    public void setServiceProviderMap(Map<String, ServiceProvider> serviceProviderMap) {
+        this.serviceProviderMap = serviceProviderMap;
+    }
 }

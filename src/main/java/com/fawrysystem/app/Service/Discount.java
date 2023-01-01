@@ -1,5 +1,8 @@
 package com.fawrysystem.app.Service;
 
+import com.fawrysystem.app.Provider.ServiceProvider;
+import com.fawrysystem.app.User.UserModel;
+
 public class Discount implements IServiceStrategy{
     private double price;
     private double discount;
@@ -40,10 +43,16 @@ public class Discount implements IServiceStrategy{
     }
 
     @Override
-    public void ExecuteService() {
+    public void ExecuteService(UserModel user, ServiceProvider provider) {
+        user.setWalletBalance(user.getWalletBalance()-getPrice());
+
         System.out.println("the cost of the service after discount is : "+getPrice());
     }
+    public void ExecuteService(ServiceProvider provider){
+        System.out.println("the cost of the service after discount is : "+getPrice());
+        provider.handler();
 
+    }
     @Override
     public double getPrice() {
         return this.price;

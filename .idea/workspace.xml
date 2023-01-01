@@ -5,18 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="finish">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Provider/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/Refund.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/Refund.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/FawrySystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Provider/CreditCardProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Provider/CreditCardProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Provider/VodafoneCashProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Provider/VodafoneCashProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/CancerHospitalDonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/CancerHospitalDonation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatRechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/EtisalatRechrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/IServiceStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/IServiceStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/MonthlyReceiptLandline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/MonthlyReceiptLandline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/NGODonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/NGODonation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeRechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/OrangeRechrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/QuarterReceiptLandline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/QuarterReceiptLandline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/SchoolDonation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/SchoolDonation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneRechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/VodafoneRechrage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WEInternet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WEInternet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WERechrage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/WERechrage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Admin/Refund.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Admin/Refund.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Provider/CreditCardProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Provider/CreditCardProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Provider/VodafoneCashProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Provider/VodafoneCashProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/CancerHospitalDonation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/CancerHospitalDonation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/Discount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/Discount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/EtisalatInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/EtisalatInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/EtisalatRechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/EtisalatRechrage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/IServiceStrategy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/IServiceStrategy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/MonthlyReceiptLandline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/MonthlyReceiptLandline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/NGODonation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/NGODonation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/OrangeInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/OrangeInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/OrangeRechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/OrangeRechrage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/QuarterReceiptLandline.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/QuarterReceiptLandline.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/SchoolDonation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/SchoolDonation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/VodafoneInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/VodafoneInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/VodafoneRechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/VodafoneRechrage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/WEInternet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/WEInternet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/WERechrage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/WERechrage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserServices.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +70,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
@@ -52,32 +98,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d2a57dc1d883fd21fb9951699df71cc7&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "d2a57dc1d883fd21fb9951699df71cc7",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
-  <component name="RunManager" selected="HTTP Request.generated-requests | #3">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fawrysystem.app.Provider" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.FawrySystemApplication">
     <configuration name="generated-requests | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" requestIdentifier="#10" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+    <configuration name="generated-requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="11" requestIdentifier="#11" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="Run single request">
+    <configuration name="generated-requests | #12" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="12" requestIdentifier="#12" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="generated-requests | #9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="9" requestIdentifier="#9" runType="Run single request">
@@ -98,9 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #3" />
+        <item itemvalue="HTTP Request.generated-requests | #12" />
         <item itemvalue="Spring Boot.FawrySystemApplication" />
-        <item itemvalue="HTTP Request.generated-requests | #2" />
+        <item itemvalue="HTTP Request.generated-requests | #11" />
         <item itemvalue="HTTP Request.generated-requests | #10" />
         <item itemvalue="HTTP Request.generated-requests | #9" />
       </list>
@@ -117,7 +170,8 @@
       <workItem from="1672189255821" duration="490000" />
       <workItem from="1672268238060" duration="5320000" />
       <workItem from="1672337635058" duration="9290000" />
-      <workItem from="1672483746442" duration="26228000" />
+      <workItem from="1672483746442" duration="26894000" />
+      <workItem from="1672566185332" duration="12253000" />
     </task>
     <task id="LOCAL-00001" summary="update the code">
       <created>1670262471222</created>
@@ -189,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672520869874</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finish">
+      <created>1672520922029</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672520922029</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

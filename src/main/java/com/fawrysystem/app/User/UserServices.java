@@ -2,12 +2,15 @@ package com.fawrysystem.app.User;
 
 import com.fawrysystem.app.Admin.AdminService;
 import com.fawrysystem.app.Admin.Refund;
+import com.fawrysystem.app.Provider.ServiceProvider;
+import com.fawrysystem.app.Service.*;
 import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.swing.text.TabExpander;
 import java.rmi.server.ExportException;
+import java.security.Provider;
 import java.util.*;
 @Service
 public class UserServices {
@@ -24,7 +27,8 @@ public class UserServices {
                     new UserModel("zizo", "zizo@gmail.com", "123456")
             ));
 
-    public List<UserModel>getUsers(){
+
+    public ArrayList<UserModel>getUsers(){
         return users;
     }
 //    for omar w74
@@ -119,5 +123,27 @@ public class UserServices {
 
     public void setUsers(ArrayList<UserModel> users) {
         this.users = users;
+    }
+
+    public boolean payForService(String userName,String provider,String serviceName){
+        UserModel user = getUserWithUsername(userName);
+        IServiceStrategy service = AdminService.getInstance().getServiceHashMap().get(serviceName);
+        ServiceProvider p = AdminService.getInstance().getServiceProviderMap().get(provider);
+        Transaction t = new Transaction(service.getName(),service.getPrice(),false,"Payment Transaction");
+        if(!Objects.equals(provider, "wallet")){
+            service.ExecuteService(p);
+            user.addTransactions(t);
+            return true;
+        }
+        else{
+            if(user.getWalletBalance()>=service.getPrice()){
+                service.ExecuteService(user,p);
+                user.addTransactions(t);
+                System.out.println("Wallet Paying.....");
+                return true;
+            }
+            System.out.println("Your Wallet is empty!");
+            return false;
+        }
     }
 }
