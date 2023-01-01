@@ -1,11 +1,13 @@
 package com.fawrysystem.app.Provider;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class VodafoneCashProvider implements ServiceProvider {
-
-    private String name  = "Vodafone Cash";
-
+    private String name  = "VodafoneCash";
+    private ArrayList<Component> providerForm = new ArrayList<Component>();
     @Override
     public void handler() {
         showPaymentForm();
@@ -14,14 +16,9 @@ public class VodafoneCashProvider implements ServiceProvider {
 
     @Override
     public void showPaymentForm() {
-        System.out.println("### --------------- Vodafone Cash Provider form --------------- ### ");
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your number: ");
-        int Num=sc.nextInt();
-        System.out.println("Enter Amount: ");
-        float amount=sc.nextInt();
-        System.out.println("### --------------- --------------------------- --------------- ### ");
-
+        for (int i = 0; i < providerForm.size(); i++) {
+            System.out.println("Enter "+providerForm.get(i).label);
+        }
     }
     @Override
     public String getName(){

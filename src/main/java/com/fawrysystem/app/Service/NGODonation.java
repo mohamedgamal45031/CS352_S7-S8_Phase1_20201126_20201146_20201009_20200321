@@ -1,11 +1,16 @@
 package com.fawrysystem.app.Service;
 
+import com.fawrysystem.app.Provider.ServiceProvider;
+import com.fawrysystem.app.User.UserModel;
+
 public class NGODonation implements IServiceStrategy{
     private String name = "NGODonation";
 
-    private double price;
+    private double price= 100.0;;
     private boolean acceptCash = true;
-
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public void setAcceptCash(boolean acceptCash) {
         this.acceptCash = acceptCash;
@@ -16,17 +21,30 @@ public class NGODonation implements IServiceStrategy{
     }
 
     public NGODonation() {
-        this.price = 100.0;
     }
     public String getName() {
         return name;
     }
     @Override
-    public void ExecuteService() {
+    public void ExecuteService(UserModel user, ServiceProvider provider) {
+        user.setWalletBalance(user.getWalletBalance()-getPrice());
+
         System.out.println("NGODonation cost is "+getPrice());
 
     }
+    public void ExecuteService(ServiceProvider provider){
+        System.out.println("NGODonation cost is "+getPrice());
+        provider.handler();
 
+    }
+    @Override
+    public String toString() {
+        return "WERechrage{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", acceptCash=" + acceptCash +
+                '}';
+    }
     @Override
     public double getPrice() {
         return price;

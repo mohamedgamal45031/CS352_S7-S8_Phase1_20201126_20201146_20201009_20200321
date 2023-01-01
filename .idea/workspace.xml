@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="make the refundable ABI">
+    <list default="true" id="a26dfe1a-b7d1-43d2-aef8-4b95f8b5f98a" name="Changes" comment="Finish Payment for service and show all transactions of the users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Admin/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/Service/Discount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fawrysystem/app/User/UserServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/Discount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/Service/Discount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/Transaction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/fawrysystem/app/User/UserServices.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +27,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/main" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,8 +45,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
+        <option name="mavenHome" value="D:\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -44,57 +57,62 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "WebServerToolWindowFactoryState": "false",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "184640434a5ccf6541a3bd287fe14a7d",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "d2a57dc1d883fd21fb9951699df71cc7",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fawrysystem.app.Provider" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.FawrySystemApplication">
-    <configuration name="FawrySystem.FawrySystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FawrySystem.FawrySystem" />
-      <module name="CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FawrySystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="FawrySystem.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FawrySystem.Main" />
-      <module name="CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FawrySystem.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="generated-requests | #41" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="41" requestIdentifier="#41" runType="Run single request">
+      <method v="2" />
     </configuration>
-    <configuration name="FawrySystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="CS352_S7-S8_Phase1_20201126_20201146_20201009_20200321" />
+    <configuration name="generated-requests | #42" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="42" requestIdentifier="#42" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #43" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="43" requestIdentifier="#43" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="FawrySystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="app" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fawrysystem.app.FawrySystemApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fawrysystem.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FawrySystem.FawrySystem" />
-        <item itemvalue="Application.FawrySystem.Main" />
+        <item itemvalue="Spring Boot.FawrySystemApplication" />
+        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="HTTP Request.generated-requests | #43" />
+        <item itemvalue="HTTP Request.generated-requests | #42" />
+        <item itemvalue="HTTP Request.generated-requests | #41" />
       </list>
     </recent_temporary>
   </component>
@@ -106,9 +124,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670173251565</updated>
-      <workItem from="1672076376171" duration="217000" />
-      <workItem from="1672076673249" duration="3980000" />
-      <workItem from="1672151693560" duration="3069000" />
+      <workItem from="1672189255821" duration="490000" />
+      <workItem from="1672268238060" duration="5320000" />
+      <workItem from="1672337635058" duration="9290000" />
+      <workItem from="1672483746442" duration="26894000" />
+      <workItem from="1672566185332" duration="19504000" />
     </task>
     <task id="LOCAL-00001" summary="update the code">
       <created>1670262471222</created>
@@ -117,21 +137,91 @@
       <option name="project" value="LOCAL" />
       <updated>1670262471222</updated>
     </task>
-    <task id="LOCAL-00002" summary="revert to the last commit">
-      <created>1672076851517</created>
+    <task id="LOCAL-00002" summary="add signUp api and add UserView">
+      <created>1672189019865</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1672076851517</updated>
+      <updated>1672189019865</updated>
     </task>
-    <task id="LOCAL-00003" summary="make the refundable ABI">
-      <created>1672080397369</created>
+    <task id="LOCAL-00003" summary="add signUp api and add UserView">
+      <created>1672189040004</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1672080397369</updated>
+      <updated>1672189040004</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added Admin Controller and Admin Service">
+      <created>1672271766320</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672271766320</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added Admin Controller and Admin Service">
+      <created>1672271779367</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672271779367</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add discount apis and add setPrice function to Service">
+      <created>1672273567215</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672273567215</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add discount apis and add setPrice function to Service">
+      <created>1672273577308</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672273577308</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Finish discount and search and admin APIs&#10;Make SearchService and AdminService Singleton for getting the data modified in runtime">
+      <created>1672357455735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672357455737</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Finish discount and search and admin APIs&#10;Make SearchService and AdminService Singleton for getting the data modified in runtime">
+      <created>1672357469464</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672357469464</updated>
+    </task>
+    <task id="LOCAL-00010" summary="finish">
+      <created>1672520869874</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672520869874</updated>
+    </task>
+    <task id="LOCAL-00011" summary="finish">
+      <created>1672520922029</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672520922029</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Finish Payment for service and show all transactions of the users">
+      <created>1672583836707</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672583836707</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finish Payment for service and show all transactions of the users">
+      <created>1672583854755</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672583854755</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,8 +240,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update the code" />
-    <MESSAGE value="revert to the last commit" />
-    <MESSAGE value="make the refundable ABI" />
-    <option name="LAST_COMMIT_MESSAGE" value="make the refundable ABI" />
+    <MESSAGE value="add signUp api and add UserView" />
+    <MESSAGE value="added Admin Controller and Admin Service" />
+    <MESSAGE value="add discount apis and add setPrice function to Service" />
+    <MESSAGE value="Finish discount and search and admin APIs&#10;Make SearchService and AdminService Singleton for getting the data modified in runtime" />
+    <MESSAGE value="finish" />
+    <MESSAGE value="Finish Payment for service and show all transactions of the users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Payment for service and show all transactions of the users" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

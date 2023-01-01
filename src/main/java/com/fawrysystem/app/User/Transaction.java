@@ -1,34 +1,20 @@
 package com.fawrysystem.app.User;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Transaction {
     private String transactionName;
     private double amount;
     private boolean refundRequested = false;
-    public void setTransactionName(String transactionName) {
-        this.transactionName = transactionName;
-    }
+    private String transactionType;
 
-    public void setRefundRequested(boolean refundRequested) {
-        this.refundRequested = refundRequested;
-    }
-
-    public boolean isRefundRequested() {
-        return refundRequested;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public String getTransactionName() {
-        return transactionName;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-    public Transaction() {
-    }
     public Transaction(String transactionName, double amount) {
         this.transactionName = transactionName;
         this.amount = amount;
@@ -38,5 +24,15 @@ public class Transaction {
         this.transactionName = transactionName;
         this.amount = amount;
         this.refundRequested = refundRequested;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionName='" + transactionName + '\'' +
+                ", amount=" + amount +
+                ", refundRequested=" + refundRequested +
+                ", transactionType='" + transactionType + '\'' +
+                '}';
     }
 }
